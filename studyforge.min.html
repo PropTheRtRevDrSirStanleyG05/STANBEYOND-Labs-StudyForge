@@ -1,0 +1,2039 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#4f46e5"><title>STANBEYOND StudyForge — Notes, Flashcards &amp; Quizzes</title><meta name="description" content="Educational note-taking app that turns notes into flashcards and quizzes with plain scripts — no AI, no cloud. All data stays in your browser."><style>:root{--bg:#f4f6fb;--panel:#ffffff;--panel2:#eef1f7;--ink:#1c2333;--muted:#68738a;--line:#dde3ef;--accent:#4f46e5;--accent2:#7c3aed;--accent-ink:#ffffff;--good:#16a34a;--warn:#d97706;--bad:#dc2626;--card:#ffffff;--shadow:0 1px 3px rgba(20,30,60,.08),0 4px 14px rgba(20,30,60,.06);--radius:12px;}[data-theme="dark"]{--bg:#0f1420;--panel:#17202f;--panel2:#1f2a3d;--ink:#e8edf7;--muted:#93a0b8;--line:#2a3a52;--accent:#818cf8;--accent2:#a78bfa;--accent-ink:#101528;--card:#17202f;--shadow:0 1px 3px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.3);}*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.5}.hidden{display:none!important}.topbar{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}.brand{font-weight:800;font-size:19px;letter-spacing:.3px;white-space:nowrap}.brand small{font-weight:400;color:var(--muted);font-size:12px;display:block;letter-spacing:0}#mainnav{display:flex;gap:4px;flex-wrap:wrap;margin-left:8px}#mainnav button{border:1px solid transparent;background:transparent;color:var(--ink);padding:8px 12px;border-radius:9px;cursor:pointer;font-size:14px}#mainnav button:hover{background:var(--panel2)}#mainnav button.active{background:var(--accent);color:var(--accent-ink);font-weight:600}.badge{display:inline-block;min-width:20px;text-align:center;background:var(--bad);color:#fff;border-radius:20px;font-size:11px;padding:1px 6px;margin-left:4px;font-weight:700}#theme-toggle{margin-left:auto;border:1px solid var(--line);background:var(--panel2);border-radius:9px;padding:7px 11px;cursor:pointer;font-size:16px}main{max-width:1280px;margin:0 auto;padding:18px 16px 60px}.view{animation:fade .18s ease}@keyframes fade{from{opacity:.4}to{opacity:1}}.btn{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:9px;padding:8px 14px;cursor:pointer;font-size:14px}.btn:hover{filter:brightness(.97)}.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}.btn.accent{background:linear-gradient(135deg,var(--accent),var(--accent2));border:0;color:#fff;font-weight:700}.btn.danger{background:var(--bad);border-color:var(--bad);color:#fff}.btn.danger-ghost{background:transparent;border-color:transparent;color:var(--bad)}.btn.small{padding:5px 10px;font-size:13px}.btn:disabled{opacity:.45;cursor:default}input[type=text],input[type=number],textarea,select{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:8px 10px;font-size:14px;font-family:inherit}input:focus,textarea:focus,select:focus{outline:2px solid var(--accent);outline-offset:0;border-color:var(--accent)}label{font-size:13px;color:var(--muted)}.notes-layout,.decks-layout{display:grid;grid-template-columns:320px 1fr;gap:16px;align-items:start}.notes-layout>*,.decks-layout>*{min-width:0}select{max-width:100%}.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px}.side-tools{display:flex;gap:8px;margin-bottom:10px}.side-tools input{flex:1;min-width:0}.note-list{display:flex;flex-direction:column;gap:8px;max-height:62vh;overflow:auto;margin-top:10px}.note-item{border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;background:var(--card)}.note-item:hover{border-color:var(--accent)}.note-item.active{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 30%,transparent)}.note-item h4{margin:0 0 4px;font-size:14px}.note-item p{margin:0;color:var(--muted);font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.note-item .meta{display:flex;gap:8px;font-size:11px;color:var(--muted);margin-top:6px}.tagrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.tag{font-size:11px;background:var(--panel2);border:1px solid var(--line);border-radius:20px;padding:2px 9px;cursor:pointer;color:var(--muted)}.tag.active{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}#ed-title{width:100%;font-size:20px;font-weight:700;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:6px 2px;margin-bottom:8px;background:transparent}.ed-meta{display:flex;gap:8px;margin-bottom:8px}.ed-meta input{flex:1;min-width:0}.toolbar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}.toolbar .btn{padding:5px 11px;font-size:13px}.ed-body{display:grid;grid-template-columns:1fr}#ed-text{width:100%;min-height:46vh;resize:vertical;font-family:Consolas,"Cascadia Code",monospace;font-size:14px;line-height:1.6}.preview{border:1px solid var(--line);border-radius:9px;padding:12px 16px;min-height:46vh;background:var(--card)}.preview h2{margin:.6em 0 .3em;font-size:18px}.preview h3{margin:.6em 0 .3em;font-size:16px}.preview ul{margin:.4em 0;padding-left:22px}.preview .qa-q{font-weight:700;color:var(--accent)}.preview .qa-a{margin:2px 0 10px}.ed-status{display:flex;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}.ed-status .spacer{flex:1}#ed-saved{font-size:12px;color:var(--muted)}.empty{text-align:center;color:var(--muted);padding:60px 20px;border:1px dashed var(--line);border-radius:var(--radius)}#modal-root{position:fixed;inset:0;display:none;z-index:100}#modal-root.open{display:flex;align-items:flex-start;justify-content:center;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}.modal-back{position:fixed;inset:0;background:rgba(10,15,30,.55)}.modal{position:relative;width:min(880px,calc(100% - 24px));margin:5vh 12px;background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:24px}.modal h3{margin:0 0 4px}.modal .sub{color:var(--muted);font-size:13px;margin:0 0 12px}.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px;flex-wrap:wrap}.cand{border:1px solid var(--line);border-radius:10px;padding:13px 15px;margin-bottom:9px;display:flex;gap:12px;align-items:flex-start;background:var(--card)}.cand input[type=checkbox]{margin-top:4px;transform:scale(1.35)}.cand .body{flex:1;min-width:0}.cand .front{font-weight:600;font-size:15px;line-height:1.5}.cand .back{color:var(--ink);opacity:.75;font-size:14px;margin-top:3px;line-height:1.55}.rule-badge{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;border-radius:6px;padding:2px 7px;background:var(--panel2);border:1px solid var(--line);color:var(--muted);white-space:nowrap}.conf{font-size:11px;color:var(--muted)}.deck-item{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:8px;cursor:pointer;background:var(--card)}.deck-item.active{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 30%,transparent)}.deck-item h4{margin:0 0 4px;font-size:14px}.deck-item .meta{font-size:12px;color:var(--muted)}.fcard{border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:var(--card);overflow:hidden}.fcard .qa{padding:10px 12px;cursor:pointer}.fcard .q{font-weight:600}.fcard .a{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink)}.fcard .frow{display:flex;gap:8px;align-items:center;padding:8px 12px;background:var(--panel2);font-size:12px;color:var(--muted)}.fcard .frow .spacer{flex:1}.icon-btn{border:0;background:transparent;cursor:pointer;font-size:14px;padding:2px 6px;border-radius:6px}.icon-btn:hover{background:var(--line)}.due-label{font-size:11px;font-weight:700;color:var(--warn)}.due-label.now{color:var(--bad)}.quiz-setup{max-width:640px}.quiz-setup .row{display:flex;gap:10px;align-items:center;margin:10px 0;flex-wrap:wrap}.checks{display:flex;gap:12px;flex-wrap:wrap}.checks label{color:var(--ink);font-size:14px;display:flex;gap:6px;align-items:center}.qcard{max-width:720px;margin:0 auto}.progress{height:8px;background:var(--panel2);border-radius:8px;overflow:hidden;margin:10px 0}.progress>div{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0}.qprompt{font-size:17px;font-weight:600;margin:14px 0}.choices{display:flex;flex-direction:column;gap:8px}.choice{border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;background:var(--card);text-align:left;width:100%;font-size:14px;color:var(--ink)}.choice:hover{border-color:var(--accent)}.choice.sel{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 30%,transparent)}.choice.right{border-color:var(--good);background:color-mix(in srgb,var(--good) 12%,transparent)}.choice.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 10%,transparent)}.feedback{margin-top:12px;padding:10px 12px;border-radius:10px;font-size:14px}.feedback.ok{background:color-mix(in srgb,var(--good) 12%,transparent);border:1px solid var(--good)}.feedback.no{background:color-mix(in srgb,var(--bad) 10%,transparent);border:1px solid var(--bad)}.match-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}.match-item{border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin-bottom:8px;cursor:pointer;background:var(--card);font-size:13.5px;width:100%;text-align:left;color:var(--ink)}.match-item.sel{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 30%,transparent)}.match-item.paired{border-color:var(--good);background:color-mix(in srgb,var(--good) 8%,transparent)}.results-score{font-size:34px;font-weight:800;text-align:center;margin:8px 0}.review-row{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:8px;background:var(--card);font-size:14px}.review-card{max-width:640px;margin:0 auto;text-align:center}.big-card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:34px 26px;min-height:220px;display:flex;align-items:center;justify-content:center;font-size:19px;margin:14px 0}.grade-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}.grade-row .btn{min-width:96px;padding:10px}.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px;text-align:center}.stat .n{font-size:28px;font-weight:800}.stat .l{font-size:12px;color:var(--muted)}table.data{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--panel);border-radius:var(--radius);overflow:hidden}table.data th,table.data td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left}table.data th{background:var(--panel2);font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted)}.set-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}.meter{height:10px;background:var(--panel2);border-radius:8px;overflow:hidden;margin:8px 0}.meter>div{height:100%;background:var(--accent)}.tips li{margin-bottom:6px;font-size:14px}code{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:13px}#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:10px;font-size:14px;opacity:0;pointer-events:none;transition:all .25s;z-index:200;max-width:90vw}#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}@media(max-width:900px){.notes-layout,.decks-layout{grid-template-columns:1fr}.note-list{max-height:30vh}#mainnav button{padding:7px 8px;font-size:13px}}.table-wrap{overflow-x:auto}.table-wrap table.data{min-width:560px}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}#qz-timer-chip{font-weight:700;font-size:13px;background:var(--panel2);border:1px solid var(--line);border-radius:20px;padding:3px 12px;white-space:nowrap}#qz-timer-chip.low{background:color-mix(in srgb,var(--bad) 14%,transparent);border-color:var(--bad);color:var(--bad)}.sort-row{display:flex;gap:8px;margin-top:8px}.pin-btn{border:1px solid var(--line);background:var(--panel);border-radius:9px;padding:7px 11px;cursor:pointer;font-size:15px}.pin-btn.on{background:color-mix(in srgb,var(--warn) 20%,transparent);border-color:var(--warn)}.note-item.pinned{border-color:var(--warn)}.note-item h4 .pin{margin-right:4px}.card-search-row{margin:0 0 10px}.week-chart{display:flex;align-items:flex-end;gap:8px;height:150px;padding:10px 4px 0}.wday{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}.wbars{display:flex;align-items:flex-end;gap:3px;height:110px}.wbar{width:14px;border-radius:4px 4px 0 0;background:var(--accent);min-height:3px}.wbar.quiz{background:var(--accent2)}.wlabel{font-size:10.5px;color:var(--muted)}.wlegend{display:flex;gap:14px;font-size:12px;color:var(--muted);margin-top:6px}.wlegend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;font-style:normal}#print-area{display:none}@media print{body.printing>header,body.printing>main,body.printing>#modal-root,body.printing>#toast{display:none!important}body.printing>#print-area{display:block;color:#000}.psheet{font-family:Georgia,'Times New Roman',serif}.psheet h1{font-size:20px;margin:0 0 4px}.psheet .psub{color:#555;font-size:12px;margin-bottom:14px}.pcard{break-inside:avoid;border:1px solid #888;border-radius:8px;padding:10px 12px;margin-bottom:10px}.pcard .pf{font-weight:bold;margin-bottom:6px}.pcard .pb{border-top:1px dashed #aaa;padding-top:6px}}@media(max-width:900px){.topbar{flex-wrap:wrap;row-gap:8px}.brand{font-size:16px}.brand small{display:none}#mainnav{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;margin-left:0;padding-bottom:6px;-webkit-overflow-scrolling:touch;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}#mainnav button{white-space:nowrap;flex:0 0 auto}.notes-layout,.decks-layout{gap:10px}.sort-row{flex-wrap:wrap}.sort-row select{flex:1;min-width:0}main{padding:12px 10px 60px}.modal{margin:3vh 8px;padding:16px}.ed-status{gap:8px}}@media(pointer:coarse){.btn{min-height:44px}.btn.small{min-height:40px}#mainnav button{padding:10px 14px}.icon-btn{padding:8px 10px;font-size:17px}.choice{padding:13px 12px}.match-item{padding:12px 11px}.cand input[type=checkbox]{transform:scale(1.5);margin-top:6px}.toolbar .btn{padding:8px 13px}input[type=text],input[type=number],textarea,select{font-size:16px}}</style></head><body><header class="topbar"><div class="brand">📚 STANBEYOND StudyForge<small>notes → flashcards → quizzes · 100% local</small></div><nav id="mainnav"><button data-view="notes" class="active">📝 Notes</button><button data-view="decks">🗂 Flashcards</button><button data-view="quiz">🎯 Quiz</button><button data-view="review">🔁 Review<span id="due-badge" class="badge hidden"></span></button><button data-view="stats">📊 Stats</button><button data-view="settings">⚙️ Data</button></nav><button id="theme-toggle" title="Toggle light/dark theme">🌙</button></header><main><section id="view-notes" class="view"><div class="notes-layout"><aside class="panel"><div class="side-tools"><input type="text" id="note-search" placeholder="🔍 Search notes…"><button id="new-note" class="btn primary">+ New</button></div><select id="notebook-filter" style="width:100%"><option value="">All notebooks</option></select><div class="sort-row"><select id="note-sort" title="Sort notes" style="width:100%"><option value="updated">⇅ Recently updated</option><option value="created">⇅ Recently created</option><option value="title">⇅ Title A–Z</option></select></div><div id="tag-filter" class="tagrow"></div><div id="note-list" class="note-list"></div></aside><div><div id="editor-empty" class="empty"><div style="font-size:40px">📝</div><p><b>No note selected.</b><br>Pick a note on the left, or create a new one.<br><span style="font-size:13px">Tip: write <code>Term: definition</code> lines, <code>**bold terms**</code>, or <code>Q: / A:</code> pairs — the generator loves structure.</span></p></div><div id="editor" class="panel hidden"><input type="text" id="ed-title" placeholder="Note title…"><div class="ed-meta"><input type="text" id="ed-notebook" list="notebook-datalist" placeholder="Notebook"><datalist id="notebook-datalist"></datalist><input type="text" id="ed-tags" placeholder="tags, comma separated"></div><div class="toolbar"><button class="btn small" data-cmd="bold" title="Bold (**text**)">𝐁</button><button class="btn small" data-cmd="h2" title="Heading">H</button><button class="btn small" data-cmd="bullet" title="Bullet list">• List</button><button class="btn small" data-cmd="qa" title="Insert Q/A pair">Q/A</button><button class="btn small" data-cmd="term" title="Insert Term: definition">T: Def</button><button class="btn small" data-cmd="preview" title="Toggle preview">👁 Preview</button></div><div class="ed-body"><textarea id="ed-text" placeholder="Write your notes here…&#10;&#10;Photosynthesis: the process by which plants…&#10;**Osmosis** is the movement of water…&#10;&#10;Q: What is ATP?&#10;A: Adenosine triphosphate."></textarea><div id="ed-preview" class="preview hidden"></div></div><div class="ed-status"><span id="ed-words" class="conf"></span><span id="ed-saved" class="conf"></span><span class="spacer"></span><button id="pin-note" class="pin-btn" title="Pin/unpin note">📌</button><button id="del-note" class="btn danger-ghost small">🗑 Delete note</button><button id="gen-cards" class="btn accent">⚡ Generate flashcards</button></div></div></div></div></section><section id="view-decks" class="view hidden"><div class="decks-layout"><aside class="panel"><div class="side-tools"><input type="text" id="deck-search" placeholder="🔍 Search decks…"><button id="new-deck" class="btn primary">+ New</button></div><div id="deck-list"></div></aside><div id="deck-detail"></div></div></section><section id="view-quiz" class="view hidden"><div id="quiz-root"></div></section><section id="view-review" class="view hidden"><div id="review-root"></div></section><section id="view-stats" class="view hidden"><div id="stats-root"></div></section><section id="view-settings" class="view hidden"><div class="set-grid"><div class="panel"><h3 style="margin-top:0">💾 Storage</h3><p class="conf">Everything is stored in this browser's <code>localStorage</code> — no account, no cloud, works offline.</p><div class="meter"><div id="storage-bar" style="width:0"></div></div><p class="conf" id="storage-text"></p><div style="display:flex;gap:8px;flex-wrap:wrap"><button id="export-btn" class="btn">⬇ Export JSON</button><button id="import-btn" class="btn">⬆ Import JSON</button><input type="file" id="import-file" accept=".json,application/json" class="hidden"></div></div><div class="panel"><h3 style="margin-top:0">🎯 Study</h3><p class="conf">Daily review target and sample content.</p><div class="row" style="display:flex;gap:10px;align-items:center;margin:10px 0;flex-wrap:wrap"><label style="min-width:120px">Daily review goal</label><input type="number" id="goal-input" min="1" max="500" style="width:90px"><span class="conf">cards/day</span></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button id="samples-btn" class="btn">↺ Load sample notes</button><button id="wipe-btn" class="btn danger">🧨 Erase ALL data</button></div></div><div class="panel"><h3 style="margin-top:0">🤖 How auto-generation works</h3><p class="conf">No AI, no network — a deterministic script scans your notes for patterns:</p><ul class="tips"><li><code>Term: definition</code>, <code>Term = …</code>, <code>Term - …</code> → definition cards</li><li><code>**Term** is/are/means …</code> → term cards</li><li><code>Q: …</code> / <code>A: …</code> → question cards</li><li><code>## Heading</code> + paragraph → topic cards</li><li>Frequent key terms → <b>fill-in-the-blank</b> cards</li></ul><p class="conf">Every candidate shows its rule and confidence. You approve each card before it joins a deck, and you can edit or delete anything afterwards.</p></div></div></section></main><div id="modal-root"><div class="modal-back" id="modal-back"></div><div class="modal" id="modal-box" role="dialog"></div></div><div id="toast"></div><div id="print-area"></div><script>(function (root, factory) {
+var api = factory();
+if (typeof module !== 'undefined' && module.exports) module.exports = api;
+else root.StudyForge = Object.assign(root.StudyForge || {}, api);
+})(typeof self !== 'undefined' ? self : this, function () {
+'use strict';
+var STOPWORDS = {};
+('a,an,the,and,or,but,if,then,else,when,while,of,at,by,for,with,about,into,through,' +
+'during,before,after,above,below,to,from,up,down,in,out,on,off,over,under,again,' +
+'further,once,here,there,all,any,both,each,few,more,most,other,some,such,no,nor,' +
+'not,only,own,same,so,than,too,very,can,will,just,should,now,is,are,was,were,be,' +
+'been,being,have,has,had,having,do,does,did,doing,would,could,ought,i,you,he,she,' +
+'it,we,they,them,his,her,its,our,their,this,that,these,those,as,also,between,' +
+'within,without,along,among,per,via,which,who,whom,what,where,why,how,because,' +
+'until,although,though,since,despite,toward,towards,upon,versus,etc,eg,ie,am,me,' +
+'my,mine,your,yours,us,themselves,himself,herself,itself,ourselves,yourselves,' +
+'must,shall,may,might,need,needs,every,either,neither,rather,quite,still,already,' +
+'often,always,never,ever,even,however,therefore,thus,hence,indeed,rather,mostly,' +
+'mainly,largely,primarily,generally,usually,typically,often,sometimes,perhaps,' +
+'maybe,almost,nearly,quite,rather,enough,ago,ahead,aside,away,back,forth,along,' +
+'across,behind,beyond,plus,except,including,like,than,via,amongst,whilst,whose,' +
+'whosoever,whereas,whereby,wherein,whatever,whenever,wherever,whether,whose'
+).split(',').forEach(function (w) { STOPWORDS[w] = true; });
+var RULE_LABEL = {
+definition: 'Definition line',
+bold: 'Bold term',
+qa: 'Q & A',
+heading: 'Heading',
+cloze: 'Fill in the blank',
+keyterm: 'Key term'
+};
+function clean(s) {
+return String(s == null ? '' : s).replace(/\s+/g, ' ').trim();
+}
+function stripQAMarker(s) {
+return String(s || '').replace(/^(Q|Question|A|Answer)\s*:\s*/i, '');
+}
+function normKey(s) {
+return clean(s).toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
+}
+function splitSentences(text) {
+var t = String(text || '').replace(/\r\n?/g, '\n'); // normalize CRLF/CR line endings
+t = t.replace(/\b(e\.g|i\.e|etc|Mr|Mrs|Ms|Dr|St|vs|Fig|no)\./g, function (m) {
+return m.replace(/\./g, '\u0001');
+});
+var parts = [];
+t.split(/\n+/).forEach(function (line) {
+line.split(/(?<=[.!?])\s+(?=[A-Z0-9"“\(\[])/).forEach(function (s) {
+s = s.replace(/\u0001/g, '.').trim();
+if (s) parts.push(s);
+});
+});
+return parts;
+}
+function stripBullet(line) {
+return line.replace(/^\s*(?:[-*•]|\d+[.)]|[a-z][.)])\s+/, '').trim();
+}
+function looksLikeUrl(s) {
+return /https?:\/\/|www\.|\.(com|org|net|edu|io|gov)\b/i.test(s);
+}
+function looksLikeTime(s) {
+return /^\d{1,2}:\d{2}(:\d{2})?/.test(s);
+}
+function extractDefinitionLines(text) {
+var out = [];
+var lines = String(text || '').split('\n');
+for (var i = 0; i < lines.length; i++) {
+var line = stripBullet(lines[i]);
+if (!line || line[0] === '#') continue;
+if (/^(Q|Question|A|Answer)\s*[:.)\-]/i.test(line)) continue; // QA rule owns these
+if (looksLikeUrl(line) || looksLikeTime(line)) continue;
+var m = line.match(/^([A-Za-z¿¡\u00C0-\u024F][\w'’\- ?\u00C0-\u024F]{0,46}?)\s*([:=>–—→]|\s+-\s+)\s*(\S[\s\S]{11,400})$/);
+if (!m) continue;
+var term = clean(m[1]);
+var def = clean(m[3]);
+if (!term || term.split(/\s+/).length > 6) continue;
+if (!/\s/.test(def) && def.length < 20) continue;   // single-word "definitions" are noise
+if (/^[A-Z0-9 ]+$/.test(term) && term.length > 24) continue; // ALL-CAPS rants
+out.push({ front: term, back: def, rule: 'definition', confidence: 0.95, source: line });
+}
+return out;
+}
+function extractBoldDefinitions(text) {
+var out = [];
+var re = /\*\*([^*]{2,60}?)\*\*/g;
+var m;
+while ((m = re.exec(text)) !== null) {
+var term = clean(m[1]);
+if (!term || /^\d+$/.test(term) || looksLikeUrl(term)) continue;
+var rest = text.slice(m.index + m[0].length, m.index + m[0].length + 600);
+var para = rest.split(/\n\s*\n/)[0];
+var sent = splitSentences(para)[0] || '';
+sent = clean(sent);
+if (sent.length < 10 || sent.length > 420) continue;
+if (!/^(is|are|was|were|means?|refers?\s+to|describes?|defined\s+as|denotes?)\b/i.test(sent)) continue;
+out.push({
+front: term,
+back: sent.charAt(0).toLowerCase() === sent.charAt(0) ? sent : sent,
+rule: 'bold', confidence: 0.9,
+source: '**' + term + '** ' + sent
+});
+}
+return out;
+}
+function extractQAPairs(text) {
+var out = [];
+var re = /(?:^|\n)\s*(?:Q|Question)\s*[:.)\-]\s*([\s\S]+?)\n\s*(?:A|Answer)\s*[:.)\-]\s*([\s\S]+?)(?=\n\s*(?:Q|Question)\s*[:.)\-]|\n\s*\n|$)/gi;
+var m;
+while ((m = re.exec(text)) !== null) {
+var q = clean(m[1]);
+var a = clean(m[2]);
+if (q.length < 4 || q.length > 300 || a.length < 2 || a.length > 600) continue;
+out.push({ front: q.replace(/\?+\s*$/, ''), back: a, rule: 'qa', confidence: 0.95, source: 'Q: ' + q });
+}
+return out;
+}
+function extractHeadingCards(text) {
+var out = [];
+var re = /(?:^|\n)\s*#{1,3}\s+([^\n]{2,80})\s*\n([\s\S]*?)(?=\n\s*#{1,3}\s+|\n{2,}|$)/g;
+var m;
+while ((m = re.exec(text)) !== null) {
+var head = clean(m[1]).replace(/[*_`]/g, '');
+var body = splitSentences(m[2]).slice(0, 3).join(' ');
+body = clean(body);
+if (!head || body.length < 40 || body.length > 520) continue;
+if (/^(introduction|conclusion|summary|overview|notes?|references?)$/i.test(head)) continue;
+out.push({ front: head, back: body, rule: 'heading', confidence: 0.8, source: '## ' + head });
+}
+return out;
+}
+function extractKeyTerms(text, limit) {
+limit = limit || 12;
+var freq = {};
+var words = String(text || '').match(/[A-Za-z][A-Za-z0-9'’\-]{2,}/g) || [];
+for (var i = 0; i < words.length; i++) {
+var w = words[i];
+var lw = w.toLowerCase();
+if (STOPWORDS[lw]) continue;
+var e = freq[lw] || { term: w.replace(/['’\-]+$/g, ''), count: 0, cap: 0 };
+e.count++;
+var c0 = w.charAt(0);
+if (c0 >= 'A' && c0 <= 'Z') e.cap++;
+freq[lw] = e;
+}
+var scored = [];
+for (var k in freq) {
+var en = freq[k];
+if (en.count < 2 && en.cap < 1) continue;
+if (en.term.length < 4) continue;
+scored.push({ term: en.term, score: en.count + en.cap * 0.6, count: en.count });
+}
+scored.sort(function (a, b) { return b.score - a.score || b.count - a.count; });
+var sentences = splitSentences(text);
+return scored.slice(0, limit).map(function (s) {
+var rx = new RegExp('\\b' + s.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+var ctx = '';
+for (var j = 0; j < sentences.length; j++) {
+if (rx.test(sentences[j]) && sentences[j].length > 24 && sentences[j].length < 320) {
+ctx = stripQAMarker(clean(sentences[j]));
+break;
+}
+}
+return { term: s.term, score: s.score, count: s.count, context: ctx };
+}).filter(function (s) { return s.context; });
+}
+function extractClozeCards(text, keyTerms) {
+var out = [];
+var terms = keyTerms && keyTerms.length ? keyTerms :
+extractKeyTerms(text, 10).map(function (k) { return { term: k.term, context: k.context }; });
+var usedSentences = {};
+for (var i = 0; i < terms.length && out.length < 24; i++) {
+var t = terms[i].term;
+if (!t || t.length < 4) continue;
+var rx = new RegExp('\\b' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+var sent = (terms[i].context || '').replace(/<\/?[A-Za-z][^<>]*>/g, '');
+var m = sent ? sent.match(rx) : null;
+if (!m || !sent || usedSentences[normKey(sent)]) continue;
+var blanked = sent.replace(rx, '_____');
+if (blanked === sent) continue;
+usedSentences[normKey(sent)] = true;
+out.push({
+front: 'Fill in the blank: ' + stripBullet(blanked),
+back: m[0],
+rule: 'cloze', confidence: 0.7,
+source: sent
+});
+}
+return out;
+}
+function extractKeyTermCards(text) {
+var out = [];
+var keys = extractKeyTerms(text, 8);
+for (var i = 0; i < keys.length; i++) {
+out.push({
+front: 'What is "' + keys[i].term + '"? (from your notes)',
+back: keys[i].context,
+rule: 'keyterm', confidence: 0.5,
+source: keys[i].context
+});
+}
+return out;
+}
+function generateCandidates(text, opts) {
+opts = opts || {};
+text = String(text || '').replace(/\r\n?/g, '\n'); // normalize CRLF/CR line endings
+if (!text.trim()) return [];
+var maxCards = opts.maxCards || 200;
+var rules = opts.rules || ['definition', 'bold', 'qa', 'heading', 'cloze', 'keyterm'];
+var all = [];
+var defs = [], bolds = [], qas = [], heads = [];
+if (rules.indexOf('definition') >= 0) { defs = extractDefinitionLines(text); all = all.concat(defs); }
+if (rules.indexOf('bold') >= 0) { bolds = extractBoldDefinitions(text); all = all.concat(bolds); }
+if (rules.indexOf('qa') >= 0) { qas = extractQAPairs(text); all = all.concat(qas); }
+if (rules.indexOf('heading') >= 0) { heads = extractHeadingCards(text); all = all.concat(heads); }
+if (rules.indexOf('cloze') >= 0 || rules.indexOf('keyterm') >= 0) {
+var seedTerms = [];
+var seenT = {};
+[defs, bolds, heads].forEach(function (arr) { // QA fronts are questions, not terms
+arr.forEach(function (c) {
+var t = clean(c.front).replace(/^what is\s+"?|"?\s*\(from your notes\)$/gi, '').replace(/^fill in the blank:\s*/i, '');
+if (t.length >= 3 && t.length <= 40 && !seenT[normKey(t)] &&
+t.indexOf('?') < 0 && !/^(q|a|question|answer)$/i.test(t)) {
+seenT[normKey(t)] = true;
+seedTerms.push({ term: t, context: '' });
+}
+});
+});
+var sentences = splitSentences(text);
+if (seedTerms.length > 1000) seedTerms = seedTerms.slice(0, 1000);
+if (seedTerms.length) {
+var byLower = {};
+var alts = seedTerms.map(function (st) {
+byLower[st.term.toLowerCase()] = st;
+return st.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}).sort(function (x, y) { return y.length - x.length; }); // longest first
+var urx = new RegExp('\\b(' + alts.join('|') + ')\\b', 'gi');
+var remaining = seedTerms.length;
+for (var j = 0; j < sentences.length && remaining > 0; j++) {
+var sent = sentences[j];
+if (sent.length <= 24 || sent.length >= 320) continue;
+urx.lastIndex = 0;
+var m, guard = 0;
+while (remaining > 0 && guard < 64 && (m = urx.exec(sent)) !== null) {
+guard++;
+var st2 = byLower[m[1].toLowerCase()];
+if (st2 && !st2.context) { st2.context = stripQAMarker(clean(sent)); remaining--; }
+if (urx.lastIndex === m.index) urx.lastIndex++;
+}
+}
+}
+seedTerms = seedTerms.filter(function (st) { return st.context; });
+var freqTerms = extractKeyTerms(text, 10);
+var merged = seedTerms.concat(freqTerms.filter(function (f) {
+return !seenT[normKey(f.term)];
+}));
+if (rules.indexOf('cloze') >= 0) all = all.concat(extractClozeCards(text, merged.slice(0, 14)));
+if (rules.indexOf('keyterm') >= 0) all = all.concat(extractKeyTermCards(text));
+}
+var best = {};
+all.forEach(function (c, idx) {
+var k = normKey(c.front);
+if (!k) return;
+if (!best[k] || best[k].confidence < c.confidence ||
+(best[k].confidence === c.confidence && best[k].front.length > c.front.length)) {
+best[k] = c;
+best[k]._idx = idx;
+}
+});
+var deduped = Object.keys(best).map(function (k) { return best[k]; });
+deduped.sort(function (a, b) {
+return b.confidence - a.confidence || a._idx - b._idx;
+});
+deduped.forEach(function (c, i) {
+c.id = 'cand-' + (i + 1);
+delete c._idx;
+});
+return deduped.slice(0, maxCards);
+}
+function parseCardImport(text) {
+var out = [];
+var lines = String(text == null ? '' : text).replace(/\r\n?/g, '\n').split('\n');
+var pendingQ = null;
+function push(f, b) {
+f = clean(f); b = clean(b);
+if (f && b && f.length <= 500 && b.length <= 2000) out.push({ front: f, back: b });
+}
+lines.forEach(function (raw) {
+var line = raw.trim();
+if (!line || line.charAt(0) === '#') return;
+var m;
+if ((m = line.match(/^\s*(?:Q|Question)\s*[:.)\-]\s*(.+)$/i))) { pendingQ = m[1]; return; }
+if ((m = line.match(/^\s*(?:A|Answer)\s*[:.)\-]\s*(.+)$/i))) {
+if (pendingQ) { push(pendingQ, m[1]); pendingQ = null; }
+return;
+}
+pendingQ = null;
+if (line.indexOf('|') >= 0) {
+var parts = line.split('|');
+push(parts[0], parts.slice(1).join('|'));
+return;
+}
+if (line.indexOf('\t') >= 0) {
+var tp = line.split('\t');
+push(tp[0], tp.slice(1).join('\t'));
+return;
+}
+if ((m = line.match(/^(.+?)\s*[:=]\s*(\S[\s\S]*)$/))) { push(m[1], m[2]); return; }
+});
+var seen = {}, deduped = [];
+out.forEach(function (c) {
+var k = normKey(c.front);
+if (k && !seen[k]) { seen[k] = 1; deduped.push(c); }
+});
+return deduped;
+}
+return {
+STOPWORDS: STOPWORDS,
+parseCardImport: parseCardImport,
+RULE_LABEL: RULE_LABEL,
+splitSentences: splitSentences,
+clean: clean,
+normKey: normKey,
+extractDefinitionLines: extractDefinitionLines,
+extractBoldDefinitions: extractBoldDefinitions,
+extractQAPairs: extractQAPairs,
+extractHeadingCards: extractHeadingCards,
+extractKeyTerms: extractKeyTerms,
+extractClozeCards: extractClozeCards,
+extractKeyTermCards: extractKeyTermCards,
+generateCandidates: generateCandidates
+};
+});</script><script>(function (root, factory) {
+var api = factory();
+if (typeof module !== 'undefined' && module.exports) module.exports = api;
+else root.StudyForge = Object.assign(root.StudyForge || {}, api);
+})(typeof self !== 'undefined' ? self : this, function () {
+'use strict';
+var DAY = 86400000;
+function freshSchedule() {
+return { ef: 2.5, interval: 0, reps: 0, due: Date.now() };
+}
+function review(prev, quality, now) {
+now = now == null ? Date.now() : now;
+var s = prev ? { ef: prev.ef, interval: prev.interval, reps: prev.reps } : { ef: 2.5, interval: 0, reps: 0 };
+var q = Math.max(0, Math.min(5, Math.round(quality)));
+var ef = s.ef + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02));
+if (ef < 1.3) ef = 1.3;
+ef = Math.round(ef * 100) / 100;
+var reps, interval;
+if (q < 3) {
+reps = 0;
+interval = 1;
+} else {
+reps = s.reps + 1;
+if (reps === 1) interval = 1;
+else if (reps === 2) interval = 6;
+else interval = Math.max(1, Math.round(s.interval * ef));
+}
+return { ef: ef, interval: interval, reps: reps, due: now + interval * DAY };
+}
+function isDue(card, now) {
+now = now == null ? Date.now() : now;
+var s = card && card.sm2 ? card.sm2 : null;
+if (!s) return true;               // never reviewed -> due
+return s.due <= now;
+}
+function dueCount(cards, now) {
+var n = 0;
+for (var i = 0; i < cards.length; i++) if (isDue(cards[i], now)) n++;
+return n;
+}
+var LEECH_LAPSES = 4; // lapses before a card is flagged as a leech
+function isLeech(card) {
+return !!card && (card.lapses || 0) >= LEECH_LAPSES;
+}
+function qualityFor(label) {
+return { again: 2, hard: 3, good: 4, easy: 5 }[label] != null ?
+{ again: 2, hard: 3, good: 4, easy: 5 }[label] : 4;
+}
+function describe(schedule, now) {
+now = now == null ? Date.now() : now;
+if (!schedule || !schedule.reps) return 'new';
+var days = Math.max(0, Math.ceil((schedule.due - now) / DAY));
+if (days === 0) return 'due now';
+return 'due in ' + days + 'd';
+}
+return {
+DAY: DAY,
+freshSchedule: freshSchedule,
+review: review,
+isDue: isDue,
+dueCount: dueCount,
+qualityFor: qualityFor,
+LEECH_LAPSES: LEECH_LAPSES,
+isLeech: isLeech,
+describe: describe
+};
+});</script><script>(function (root, factory) {
+var api = factory();
+if (typeof module !== 'undefined' && module.exports) module.exports = api;
+else root.StudyForge = Object.assign(root.StudyForge || {}, api);
+})(typeof self !== 'undefined' ? self : this, function () {
+'use strict';
+var STOP = null;
+function stopwords() {
+if (!STOP) {
+var g = (typeof globalThis !== 'undefined') ? globalThis : {};
+var SF = (g && g.StudyForge) || {};
+STOP = SF.STOPWORDS || {};
+}
+return STOP;
+}
+function mulberry32(seed) {
+var a = (seed >>> 0) || 1;
+return function () {
+a |= 0; a = (a + 0x6D2B79F5) | 0;
+var t = Math.imul(a ^ (a >>> 15), 1 | a);
+t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+};
+}
+function shuffle(arr, rand) {
+var a = arr.slice();
+for (var i = a.length - 1; i > 0; i--) {
+var j = Math.floor(rand() * (i + 1));
+var t = a[i]; a[i] = a[j]; a[j] = t;
+}
+return a;
+}
+function clean(s) {
+return String(s == null ? '' : s).replace(/\s+/g, ' ').trim();
+}
+function pickDistractors(cards, correctIdx, n, rand) {
+var pool = [];
+for (var i = 0; i < cards.length; i++) {
+if (i !== correctIdx) pool.push(cards[i].back);
+}
+pool = shuffle(pool, rand);
+var correctLen = clean(cards[correctIdx].back).length;
+pool.sort(function (a, b) {
+return Math.abs(clean(a).length - correctLen) - Math.abs(clean(b).length - correctLen);
+});
+var seen = {};
+var out = [];
+seen[clean(cards[correctIdx].back).toLowerCase()] = true;
+for (var k = 0; k < pool.length && out.length < n; k++) {
+var key = clean(pool[k]).toLowerCase();
+if (!key || seen[key]) continue;
+seen[key] = true;
+out.push(clean(pool[k]));
+}
+return out;
+}
+function makeMcq(card, idx, cards, rand) {
+var distractors = pickDistractors(cards, idx, 3, rand);
+if (distractors.length < 3) return null; // need a full set of 4 choices
+var choices = shuffle([clean(card.back)].concat(distractors), rand);
+return {
+kind: 'mcq',
+prompt: clean(card.front),
+choices: choices,
+answerIndex: choices.indexOf(clean(card.back)),
+cardId: card.id
+};
+}
+function makeTf(card, idx, cards, rand) {
+if (cards.length < 2) return null;
+var isTrue = rand() < 0.5;
+var back = clean(card.back);
+if (!isTrue) {
+var others = pickDistractors(cards, idx, 1, rand);
+if (!others.length) return null;
+back = others[0];
+}
+return {
+kind: 'tf',
+statement: clean(card.front) + '  —  ' + back,
+answer: isTrue,
+cardId: card.id
+};
+}
+function blankableWord(text) {
+var words = clean(text).match(/[A-Za-z][A-Za-z0-9'’\-]{4,}/g) || [];
+var sw = stopwords();
+var best = '';
+for (var i = 0; i < words.length; i++) {
+var w = words[i].replace(/['’\-]+$/g, '');
+if (w.length < 5 || sw[w.toLowerCase()]) continue;
+if (w.length > best.length) best = w;
+}
+return best;
+}
+function makeBlank(card, rand) {
+var prompt, answer;
+if (card.rule === 'cloze') {
+prompt = clean(card.front).replace(/^fill in the blank:\s*/i, '');
+answer = clean(card.back);
+} else {
+var word = blankableWord(card.back);
+if (!word) return null;
+var rx = new RegExp('\\b' + word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b');
+var sentence = clean(card.back);
+var blanked = sentence.replace(rx, '_____');
+if (blanked === sentence) return null;
+prompt = clean(card.front) + ' — ' + blanked;
+answer = word;
+}
+void rand;
+return { kind: 'blank', prompt: prompt, answer: answer, cardId: card.id };
+}
+function makeMatch(cards, rand) {
+var n = Math.min(6, cards.length);
+if (n < 4) return null;
+var picked = shuffle(cards, rand).slice(0, n);
+var pairs = picked.map(function (c) {
+return { left: clean(c.front), right: clean(c.back), cardId: c.id };
+});
+return {
+kind: 'match',
+pairs: pairs,
+leftOrder: shuffle(pairs.map(function (p, i) { return i; }), rand),
+rightOrder: shuffle(pairs.map(function (p, i) { return i; }), rand)
+};
+}
+function buildQuiz(cards, opts) {
+opts = opts || {};
+var types = opts.types && opts.types.length ? opts.types.slice() : ['mcq', 'tf', 'blank'];
+var seed = opts.seed == null ? (Date.now() % 2147483647) : opts.seed;
+var rand = mulberry32(seed);
+var usable = (cards || []).filter(function (c) {
+return c && clean(c.front) && clean(c.back);
+});
+if (!usable.length) return { questions: [], seed: seed, deckSize: 0, error: 'empty' };
+var count = Math.min(opts.count || 10, usable.length * 2);
+var order = shuffle(usable.map(function (c, i) { return i; }), rand);
+var questions = [];
+var typeCycle = shuffle(types, rand);
+var ti = 0, oi = 0, guard = 0;
+if (types.indexOf('match') >= 0 && usable.length >= 4) {
+var mq = makeMatch(usable, rand);
+if (mq) { questions.push(mq); count = Math.max(0, count - 1); }
+typeCycle = typeCycle.filter(function (t) { return t !== 'match'; });
+}
+while (questions.length < count && guard < count * 12 + 20 && typeCycle.length) {
+guard++;
+var kind = typeCycle[ti % typeCycle.length]; ti++;
+var idx = order[oi % order.length]; oi++;
+var card = usable[idx];
+var q = null;
+if (kind === 'mcq' && usable.length >= 4) q = makeMcq(card, idx, usable, rand);
+else if (kind === 'tf') q = makeTf(card, idx, usable, rand);
+else if (kind === 'blank') q = makeBlank(card, rand);
+else if (kind === 'mcq') q = makeTf(card, idx, usable, rand); // fallback for tiny decks
+if (q) questions.push(q);
+}
+return { questions: questions, seed: seed, deckSize: usable.length };
+}
+function gradeQuiz(quiz, answers) {
+var correct = 0;
+answers = answers || []; // null/undefined = nothing answered
+var detail = quiz.questions.map(function (q, i) {
+var a = answers[i];
+var ok = false, expected = null;
+if (q.kind === 'mcq') { ok = a === q.answerIndex; expected = q.choices[q.answerIndex]; }
+else if (q.kind === 'tf') { ok = a === q.answer; expected = q.answer ? 'True' : 'False'; }
+else if (q.kind === 'blank') {
+ok = clean(String(a == null ? '' : a)).toLowerCase() === clean(q.answer).toLowerCase();
+expected = q.answer;
+} else if (q.kind === 'match') {
+var pairs = q.pairs, total = pairs.length, hits = 0;
+if (Array.isArray(a)) {
+for (var li = 0; li < q.leftOrder.length; li++) {
+var pairIdx = q.leftOrder[li];
+var rightPos = a[li];
+if (rightPos != null && q.rightOrder[rightPos] === pairIdx) hits++;
+}
+}
+ok = hits === total && total > 0;
+expected = hits + '/' + total + ' pairs';
+if (hits > 0 && hits < total) correct += hits / total;
+else if (ok) correct += 1;
+return { ok: ok, expected: expected, question: q, given: a, partial: hits / total };
+}
+if (ok) correct += 1;
+return { ok: ok, expected: expected, question: q, given: a };
+});
+return {
+correct: Math.round(correct * 100) / 100,
+total: quiz.questions.length,
+pct: quiz.questions.length ? Math.round((correct / quiz.questions.length) * 1000) / 10 : 0,
+detail: detail
+};
+}
+return {
+mulberry32: mulberry32,
+shuffle: shuffle,
+buildQuiz: buildQuiz,
+gradeQuiz: gradeQuiz,
+makeMcq: makeMcq,
+makeTf: makeTf,
+makeBlank: makeBlank,
+makeMatch: makeMatch
+};
+});</script><script>(function (root, factory) {
+var api = factory();
+if (typeof module !== 'undefined' && module.exports) module.exports = api;
+else root.StudyForge = Object.assign(root.StudyForge || {}, api);
+})(typeof self !== 'undefined' ? self : this, function () {
+'use strict';
+var STORAGE_KEY = 'studyforge.v1';
+var SCHEMA_VERSION = 1;
+function uid(prefix) {
+return (prefix || 'id') + '_' + Date.now().toString(36) +
+Math.random().toString(36).slice(2, 8);
+}
+function blankDB() {
+return {
+version: SCHEMA_VERSION,
+notes: [],
+decks: [],
+quizRuns: [],
+reviewLog: [],
+settings: { theme: 'light', dailyGoal: 20 },
+createdAt: Date.now()
+};
+}
+function normalizeCard(c) {
+c = c || {};
+return {
+id: c.id || uid('card'),
+front: String(c.front || ''),
+back: String(c.back || ''),
+rule: c.rule || 'manual',
+createdAt: c.createdAt || Date.now(),
+sm2: c.sm2 || { ef: 2.5, interval: 0, reps: 0, due: Date.now() },
+reviews: c.reviews || 0,
+lapses: c.lapses || 0
+};
+}
+function normalizeNote(n) {
+n = n || {};
+return {
+id: n.id || uid('note'),
+title: String(n.title || 'Untitled note'),
+body: String(n.body || ''),
+notebook: String(n.notebook || 'General'),
+tags: Array.isArray(n.tags) ? n.tags.map(String) : [],
+pinned: !!n.pinned,
+createdAt: n.createdAt || Date.now(),
+updatedAt: n.updatedAt || Date.now()
+};
+}
+function normalizeDeck(d) {
+d = d || {};
+return {
+id: d.id || uid('deck'),
+noteId: d.noteId || null,
+name: String(d.name || 'Untitled deck'),
+createdAt: d.createdAt || Date.now(),
+cards: Array.isArray(d.cards) ? d.cards.map(normalizeCard) : []
+};
+}
+function normalizeDB(raw) {
+var db = blankDB();
+if (!raw || typeof raw !== 'object') return db;
+if (Array.isArray(raw.notes)) db.notes = raw.notes.map(normalizeNote);
+if (Array.isArray(raw.decks)) db.decks = raw.decks.map(normalizeDeck);
+if (Array.isArray(raw.quizRuns)) db.quizRuns = raw.quizRuns;
+if (Array.isArray(raw.reviewLog)) db.reviewLog = raw.reviewLog;
+if (raw.settings && typeof raw.settings === 'object') {
+db.settings = {
+theme: raw.settings.theme === 'dark' ? 'dark' : 'light',
+dailyGoal: Math.max(1, Math.min(500, parseInt(raw.settings.dailyGoal, 10) || 20))
+};
+}
+db.version = SCHEMA_VERSION;
+return db;
+}
+function serialize(db) {
+return JSON.stringify(db);
+}
+function deserialize(json) {
+try {
+return normalizeDB(JSON.parse(json));
+} catch (e) {
+return blankDB();
+}
+}
+function save(db) {
+var payload = serialize(db);
+try {
+if (typeof localStorage !== 'undefined') localStorage.setItem(STORAGE_KEY, payload);
+return { ok: true, bytes: payload.length };
+} catch (e) {
+return { ok: false, error: String((e && e.name) || e), bytes: payload.length };
+}
+}
+function load() {
+try {
+if (typeof localStorage === 'undefined') return blankDB();
+var raw = localStorage.getItem(STORAGE_KEY);
+if (!raw) return blankDB();
+return normalizeDB(JSON.parse(raw));
+} catch (e) {
+return blankDB();
+}
+}
+function storageBytes() {
+try {
+if (typeof localStorage === 'undefined') return 0;
+var raw = localStorage.getItem(STORAGE_KEY);
+return raw ? raw.length : 0;
+} catch (e) { return 0; }
+}
+function csvCell(s) {
+s = String(s == null ? '' : s);
+return (/[",\n\r]/.test(s)) ? '"' + s.replace(/"/g, '""') + '"' : s;
+}
+function deckToCSV(deck) {
+var rows = [['front', 'back']];
+(deck.cards || []).forEach(function (c) {
+rows.push([csvCell(c.front), csvCell(c.back)]);
+});
+return rows.map(function (r) { return r.join(','); }).join('\n');
+}
+function sampleNotes() {
+var now = Date.now();
+return [
+{
+id: 'note_sample_bio', title: 'Cell Biology — Key Concepts',
+notebook: 'Biology', tags: ['cells', 'exam-1'],
+createdAt: now, updatedAt: now,
+body:
+'## Cell Organelles\n' +
+'Mitochondria are the powerhouse of the cell, generating ATP through cellular respiration.\n' +
+'\n' +
+'Photosynthesis: the process by which green plants convert sunlight, water and carbon dioxide into glucose and oxygen.\n' +
+'Cellular respiration = the set of metabolic reactions that break down glucose to release ATP.\n' +
+'Ribosome - a molecular machine that builds proteins by translating messenger RNA.\n' +
+'\n' +
+'## Transport\n' +
+'**Osmosis** is the movement of water across a selectively permeable membrane from low to high solute concentration.\n' +
+'**Diffusion** means the net movement of particles from an area of higher concentration to an area of lower concentration.\n' +
+'\n' +
+'Q: Which organelle is responsible for photosynthesis?\n' +
+'A: The chloroplast, which contains the pigment chlorophyll.\n' +
+'\n' +
+'Q: What does ATP stand for?\n' +
+'A: Adenosine triphosphate, the energy currency of the cell.\n' +
+'\n' +
+'- Nucleus: the control center of the cell containing DNA.\n' +
+'- Chloroplast: the site of photosynthesis in plant cells.\n'
+},
+{
+id: 'note_sample_hist', title: 'World History — Quick Facts',
+notebook: 'History', tags: ['timeline'],
+createdAt: now, updatedAt: now,
+body:
+'## Ancient Rome\n' +
+'The **Roman Empire** was one of the largest empires in history, at its height spanning three continents.\n' +
+'Pax Romana: a 200-year period of relative peace and stability across the Roman Empire.\n' +
+'\n' +
+'Q: In which year did the Western Roman Empire fall?\n' +
+'A: 476 CE, when Odoacer deposed Romulus Augustulus.\n' +
+'\n' +
+'Julius Caesar = the Roman general whose assassination in 44 BCE ended the Roman Republic.\n' +
+'\n' +
+'## Key vocabulary\n' +
+'- Republic: a state where power rests with elected representatives.\n' +
+'- Senate - the aristocratic advisory council of ancient Rome.\n'
+}
+].map(normalizeNote);
+}
+return {
+STORAGE_KEY: STORAGE_KEY,
+SCHEMA_VERSION: SCHEMA_VERSION,
+uid: uid,
+blankDB: blankDB,
+normalizeDB: normalizeDB,
+normalizeNote: normalizeNote,
+normalizeDeck: normalizeDeck,
+normalizeCard: normalizeCard,
+serialize: serialize,
+deserialize: deserialize,
+save: save,
+load: load,
+storageBytes: storageBytes,
+deckToCSV: deckToCSV,
+sampleNotes: sampleNotes
+};
+});</script><script>(function () {
+'use strict';
+var SF = window.StudyForge;
+function $(id) { return document.getElementById(id); }
+function esc(s) {
+return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+});
+}
+function fmtDate(ts) {
+return new Date(ts).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+}
+function wordsOf(t) {
+var w = String(t || '').trim().split(/\s+/).filter(Boolean);
+return w.length === 1 && w[0] === '' ? 0 : w.length;
+}
+var _toastT = null;
+function toast(msg) {
+var t = $('toast');
+t.textContent = msg;
+t.classList.add('show');
+clearTimeout(_toastT);
+_toastT = setTimeout(function () { t.classList.remove('show'); }, 2400);
+}
+var db = SF.load();
+if (db.notes.length === 0 && db.decks.length === 0) {
+db.notes = SF.sampleNotes();
+SF.save(db);
+}
+var ui = {
+view: 'notes',
+noteId: db.notes.length ? db.notes[0].id : null,
+deckId: db.decks.length ? db.decks[0].id : null,
+noteSearch: '', nbFilter: '', tagFilter: '', noteSort: 'updated',
+deckSearch: '', cardSearch: '', cardSort: 'new', cardFilter: '', selCards: {}, preview: false,
+quiz: null,           // {data, idx, answers, checked, matchSt}
+reviewQueue: [], reviewIdx: 0, reviewShowBack: false
+};
+var _lastEdNote = null;
+var _saveT = null;
+function persist(immediate) {
+function write() {
+var r = SF.save(db);
+updateDueBadge();
+updateStorageMeter();
+var el = $('ed-saved');
+if (el) el.textContent = r.ok ? '✓ Saved ' + new Date().toLocaleTimeString() : '⚠ Storage error: ' + r.error;
+}
+if (_saveT) clearTimeout(_saveT);
+if (immediate) write(); else _saveT = setTimeout(write, 600);
+}
+function openModal(html) { $('modal-box').innerHTML = html; $('modal-root').classList.add('open'); }
+function closeModal() { $('modal-root').classList.remove('open'); }
+var VIEWS = ['notes', 'decks', 'quiz', 'review', 'stats', 'settings'];
+function showView(v) {
+ui.view = v;
+VIEWS.forEach(function (x) { $('view-' + x).classList.toggle('hidden', x !== v); });
+var btns = document.querySelectorAll('#mainnav button');
+for (var i = 0; i < btns.length; i++) btns[i].classList.toggle('active', btns[i].dataset.view === v);
+if (v === 'notes') renderNotes();
+else if (v === 'decks') renderDecks();
+else if (v === 'quiz') renderQuiz();
+else if (v === 'review') renderReview(true);
+else if (v === 'stats') renderStats();
+else if (v === 'settings') renderSettings();
+window.scrollTo(0, 0);
+}
+function updateDueBadge() {
+var n = 0;
+db.decks.forEach(function (d) { n += SF.dueCount(d.cards, Date.now()); });
+var b = $('due-badge');
+b.textContent = n;
+b.classList.toggle('hidden', n === 0);
+}
+function currentNote() {
+for (var i = 0; i < db.notes.length; i++) if (db.notes[i].id === ui.noteId) return db.notes[i];
+return null;
+}
+function allNotebooks() {
+var s = {};
+db.notes.forEach(function (n) { s[n.notebook || 'General'] = 1; });
+return Object.keys(s).sort();
+}
+function allTags() {
+var s = {};
+db.notes.forEach(function (n) { (n.tags || []).forEach(function (t) { if (t) s[t] = 1; }); });
+return Object.keys(s).sort();
+}
+function filteredNotes() {
+var q = ui.noteSearch.trim().toLowerCase();
+var list = db.notes.filter(function (n) {
+if (ui.nbFilter && (n.notebook || 'General') !== ui.nbFilter) return false;
+if (ui.tagFilter && (n.tags || []).indexOf(ui.tagFilter) < 0) return false;
+if (!q) return true;
+return (n.title + ' ' + n.body + ' ' + (n.tags || []).join(' ')).toLowerCase().indexOf(q) >= 0;
+});
+list.sort(function (a, b) {
+var pa = a.pinned ? 1 : 0, pb = b.pinned ? 1 : 0;
+if (pa !== pb) return pb - pa;                       // pinned first
+if (ui.noteSort === 'created') return b.createdAt - a.createdAt;
+if (ui.noteSort === 'title') return String(a.title || '').localeCompare(String(b.title || ''));
+return b.updatedAt - a.updatedAt;                    // 'updated' default
+});
+return list;
+}
+function renderNotes() {
+var nf = $('notebook-filter');
+var curNb = ui.nbFilter;
+nf.innerHTML = '<option value="">All notebooks</option>' + allNotebooks().map(function (nb) {
+return '<option value="' + esc(nb) + '"' + (nb === curNb ? ' selected' : '') + '>' + esc(nb) + '</option>';
+}).join('');
+$('tag-filter').innerHTML = allTags().map(function (t) {
+return '<span class="tag' + (t === ui.tagFilter ? ' active' : '') + '" data-tag="' + esc(t) + '">#' + esc(t) + '</span>';
+}).join('');
+var tags = document.querySelectorAll('#tag-filter .tag');
+for (var i = 0; i < tags.length; i++) tags[i].addEventListener('click', function () {
+ui.tagFilter = ui.tagFilter === this.dataset.tag ? '' : this.dataset.tag;
+renderNotes();
+});
+renderNoteList();
+renderEditor();
+}
+function renderNoteList() {
+var list = filteredNotes();
+$('note-list').innerHTML = list.length ? list.map(function (n) {
+var snippet = (n.body || '').split('\n')[0].slice(0, 80);
+return '<div class="note-item' + (n.id === ui.noteId ? ' active' : '') + (n.pinned ? ' pinned' : '') + '" data-id="' + n.id + '">' +
+'<h4>' + (n.pinned ? '<span class="pin">📌</span>' : '') + esc(n.title || 'Untitled') + '</h4>' +
+'<p>' + esc(snippet) + '</p>' +
+'<div class="meta"><span>📓 ' + esc(n.notebook || 'General') + '</span><span>' + fmtDate(n.updatedAt) + '</span></div>' +
+'</div>';
+}).join('') : '<div class="empty" style="padding:24px">No notes match.</div>';
+var items = document.querySelectorAll('#note-list .note-item');
+for (var i = 0; i < items.length; i++) items[i].addEventListener('click', function () {
+openNote(this.dataset.id);
+});
+}
+function openNote(id) {
+ui.noteId = id;
+ui.preview = false;
+_lastEdNote = null;
+renderNotes();
+var t = $('ed-text');
+if (t) t.scrollTop = 0;
+}
+function renderEditor() {
+var n = currentNote();
+$('editor-empty').classList.toggle('hidden', !!n);
+$('editor').classList.toggle('hidden', !n);
+if (!n) return;
+if (_lastEdNote !== n.id) {
+_lastEdNote = n.id;
+$('ed-title').value = n.title || '';
+$('ed-notebook').value = n.notebook || '';
+$('ed-tags').value = (n.tags || []).join(', ');
+$('ed-text').value = n.body || '';
+$('notebook-datalist').innerHTML = allNotebooks().map(function (nb) {
+return '<option value="' + esc(nb) + '">';
+}).join('');
+var pinBtn = $('pin-note');
+pinBtn.classList.toggle('on', !!n.pinned);
+pinBtn.title = n.pinned ? 'Unpin note' : 'Pin note';
+updateWordCount();
+syncPreview();
+}
+}
+function updateWordCount() {
+var n = currentNote();
+if (!n) return;
+var wc = wordsOf(n.body);
+$('ed-words').textContent = wc + ' words · ' + (n.body || '').length + ' chars · ~' + Math.max(1, Math.round(wc / 200)) + ' min read';
+}
+function markBodyDirty() {
+var n = currentNote();
+if (!n) return;
+n.updatedAt = Date.now();
+$('ed-saved').textContent = '● Saving…';
+updateWordCount();
+persist(false);
+}
+function renderMarkdownLite(text) {
+var lines = esc(String(text || '')).split('\n');
+var html = '', inList = false;
+function closeList() { if (inList) { html += '</ul>'; inList = false; } }
+function inline(s) {
+return s.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>');
+}
+for (var i = 0; i < lines.length; i++) {
+var L = lines[i];
+var m;
+if ((m = L.match(/^#{1,3}\s+(.*)/))) { closeList(); html += '<h2>' + inline(m[1]) + '</h2>'; }
+else if ((m = L.match(/^\s*[-*•]\s+(.*)/))) {
+if (!inList) { html += '<ul>'; inList = true; }
+html += '<li>' + inline(m[1]) + '</li>';
+}
+else if ((m = L.match(/^\s*(?:Q|Question)\s*[:.)-]\s*(.*)/i))) { closeList(); html += '<div class="qa-q">Q: ' + inline(m[1]) + '</div>'; }
+else if ((m = L.match(/^\s*(?:A|Answer)\s*[:.)-]\s*(.*)/i))) { closeList(); html += '<div class="qa-a">A: ' + inline(m[1]) + '</div>'; }
+else if (/^\s*$/.test(L)) { closeList(); }
+else { closeList(); html += '<p>' + inline(L) + '</p>'; }
+}
+closeList();
+return html || '<p style="color:var(--muted)">Nothing to preview.</p>';
+}
+function syncPreview() {
+var n = currentNote();
+if (!n) return;
+$('ed-preview').classList.toggle('hidden', !ui.preview);
+$('ed-text').classList.toggle('hidden', ui.preview);
+if (ui.preview) $('ed-preview').innerHTML = renderMarkdownLite(n.body);
+}
+function insertAtCursor(text) {
+var ta = $('ed-text');
+var s = ta.selectionStart, e = ta.selectionEnd, v = ta.value;
+ta.value = v.slice(0, s) + text + v.slice(e);
+ta.focus();
+ta.selectionStart = ta.selectionEnd = s + text.length;
+syncBodyFromTextarea();
+}
+function surround(pre, post) {
+var ta = $('ed-text');
+var s = ta.selectionStart, e = ta.selectionEnd, v = ta.value;
+if (s === e) { insertAtCursor(pre + post); ta.selectionStart = s + pre.length; ta.selectionEnd = s + pre.length; return; }
+ta.value = v.slice(0, s) + pre + v.slice(s, e) + post + v.slice(e);
+ta.focus(); ta.selectionStart = s + pre.length; ta.selectionEnd = e + pre.length;
+syncBodyFromTextarea();
+}
+function prefixLine(prefix) {
+var ta = $('ed-text');
+var s = ta.selectionStart, v = ta.value;
+var ls = v.lastIndexOf('\n', s - 1) + 1;
+ta.value = v.slice(0, ls) + prefix + v.slice(ls);
+ta.focus(); ta.selectionStart = ta.selectionEnd = s + prefix.length;
+syncBodyFromTextarea();
+}
+function syncBodyFromTextarea() {
+var n = currentNote();
+if (!n) return;
+n.body = $('ed-text').value;
+markBodyDirty();
+syncPreview();
+}
+function candHtml(c) {
+var checked = c.confidence >= 0.7 ? ' checked' : '';
+return '<label class="cand"><input type="checkbox" data-cid="' + c.id + '"' + checked + '>' +
+'<span class="body"><span class="front">' + esc(c.front) + '</span> ' +
+'<span class="rule-badge">' + esc(SF.RULE_LABEL[c.rule] || c.rule) + '</span> ' +
+'<span class="conf">' + Math.round(c.confidence * 100) + '%</span>' +
+'<div class="back">' + esc(c.back) + '</div></span></label>';
+}
+function openGenerate() {
+var note = currentNote();
+if (!note || !(note.body || '').trim()) { toast('Write some notes first.'); return; }
+var t0 = performance.now();
+var cands = SF.generateCandidates(note.body);
+var ms = Math.round(performance.now() - t0);
+if (!cands.length) { toast('No patterns found — try "Term: definition" lines or Q/A pairs.'); return; }
+var deckOpts = db.decks.map(function (d) {
+return '<option value="' + d.id + '">' + esc(d.name) + ' (' + d.cards.length + ' cards)</option>';
+}).join('');
+openModal(
+'<h3>⚡ ' + cands.length + ' flashcard candidates</h3>' +
+'<p class="sub">Found in ' + ms + ' ms by pattern matching (no AI). Tick the ones you want, then add them to a deck. You can edit every card afterwards.</p>' +
+'<div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap">' +
+'<button class="btn small" id="m-all">All</button>' +
+'<button class="btn small" id="m-none">None</button>' +
+'<button class="btn small" id="m-high">Only ≥80%</button></div>' +
+'<div id="m-cands" style="max-height:46vh;overflow:auto">' + cands.map(candHtml).join('') + '</div>' +
+'<div class="row" style="display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap">' +
+'<label>Add to deck:</label>' +
+'<select id="m-deck" style="flex:1;min-width:200px"><option value="__new">＋ New deck: ' + esc(note.title || 'Untitled') + '</option>' + deckOpts + '</select></div>' +
+'<div class="modal-actions"><button class="btn" id="m-cancel">Cancel</button>' +
+'<button class="btn primary" id="m-add">Add selected cards</button></div>'
+);
+function setAll(fn) {
+var boxes = document.querySelectorAll('#m-cands input[type=checkbox]');
+for (var i = 0; i < boxes.length; i++) boxes[i].checked = fn(boxes[i]);
+}
+$('m-all').addEventListener('click', function () { setAll(function () { return true; }); });
+$('m-none').addEventListener('click', function () { setAll(function () { return false; }); });
+$('m-high').addEventListener('click', function () {
+setAll(function (b) {
+var c = null;
+for (var i = 0; i < cands.length; i++) if (cands[i].id === b.dataset.cid) c = cands[i];
+return c && c.confidence >= 0.8;
+});
+});
+$('m-cancel').addEventListener('click', closeModal);
+$('m-add').addEventListener('click', function () {
+var picked = [];
+var boxes = document.querySelectorAll('#m-cands input[type=checkbox]:checked');
+for (var i = 0; i < boxes.length; i++) {
+for (var j = 0; j < cands.length; j++) {
+if (cands[j].id === boxes[i].dataset.cid) { picked.push(cands[j]); break; }
+}
+}
+if (!picked.length) { toast('Nothing selected.'); return; }
+var deckId = $('m-deck').value;
+var deck;
+if (deckId === '__new') {
+deck = SF.normalizeDeck({ name: (note.title || 'Untitled') + ' — Flashcards', noteId: note.id });
+db.decks.push(deck);
+} else {
+deck = db.decks.filter(function (d) { return d.id === deckId; })[0];
+if (!deck) { toast('Deck not found.'); return; }
+}
+picked.forEach(function (c) {
+deck.cards.push(SF.normalizeCard({ front: c.front, back: c.back, rule: c.rule }));
+});
+persist(true);
+closeModal();
+ui.deckId = deck.id;
+toast('Added ' + picked.length + ' card' + (picked.length === 1 ? '' : 's') + ' to "' + deck.name + '"');
+});
+}
+function isMastered(c) {
+return !!(c.sm2 && c.sm2.reps >= 3 && !SF.isDue(c, Date.now()));
+}
+function deckMastery(d) {
+if (!d.cards.length) return 0;
+var m = d.cards.filter(isMastered).length;
+return Math.round((m / d.cards.length) * 100);
+}
+function currentDeck() {
+for (var i = 0; i < db.decks.length; i++) if (db.decks[i].id === ui.deckId) return db.decks[i];
+return null;
+}
+function filteredDecks() {
+var q = ui.deckSearch.trim().toLowerCase();
+return db.decks.filter(function (d) {
+return !q || (d.name + ' ' + d.cards.map(function (c) { return c.front; }).join(' ')).toLowerCase().indexOf(q) >= 0;
+});
+}
+function renderDecks() {
+var list = filteredDecks();
+$('deck-list').innerHTML = list.length ? list.map(function (d) {
+var due = SF.dueCount(d.cards, Date.now());
+return '<div class="deck-item' + (d.id === ui.deckId ? ' active' : '') + '" data-id="' + d.id + '">' +
+'<h4>' + esc(d.name) + '</h4>' +
+'<div class="meta">' + d.cards.length + ' cards' + (due ? ' · <b style="color:var(--bad)">' + due + ' due</b>' : '') +
+(d.cards.length ? ' · ' + deckMastery(d) + '% mastered' : '') + '</div></div>';
+}).join('') : '<div class="empty" style="padding:24px">No decks yet.<br><span style="font-size:13px">Generate some from a note → ⚡</span></div>';
+var items = document.querySelectorAll('#deck-list .deck-item');
+for (var i = 0; i < items.length; i++) items[i].addEventListener('click', function () {
+ui.deckId = this.dataset.id;
+ui.cardSearch = '';
+ui.selCards = {};
+ui.cardFilter = '';
+renderDecks();
+});
+renderDeckDetail();
+}
+function renderDeckDetail() {
+var box = $('deck-detail');
+var d = currentDeck();
+if (!d) {
+box.innerHTML = '<div class="empty"><div style="font-size:40px">🗂</div><p><b>No deck selected.</b><br>Create one, or generate cards from a note.</p></div>';
+return;
+}
+var note = db.notes.filter(function (n) { return n.id === d.noteId; })[0];
+var cq = ui.cardSearch.trim().toLowerCase();
+Object.keys(ui.selCards).forEach(function (id) {
+if (!d.cards.some(function (c) { return c.id === id; })) delete ui.selCards[id];
+});
+var cards = d.cards.filter(function (c) {
+if (ui.cardFilter === 'leech' && !SF.isLeech(c)) return false;
+return !cq || (c.front + ' ' + c.back).toLowerCase().indexOf(cq) >= 0;
+});
+var sorted = cards.slice();
+if (ui.cardSort === 'az') sorted.sort(function (a, b) { return String(a.front).localeCompare(String(b.front)); });
+else if (ui.cardSort === 'due') sorted.sort(function (a, b) {
+var ad = SF.isDue(a, Date.now()) ? 0 : 1, bd = SF.isDue(b, Date.now()) ? 0 : 1;
+return ad - bd || b.createdAt - a.createdAt;
+});
+else sorted.sort(function (a, b) { return b.createdAt - a.createdAt; });
+var leechN = d.cards.filter(function (c) { return SF.isLeech(c); }).length;
+var selN = Object.keys(ui.selCards).length;
+var html = '<div class="panel"><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">' +
+'<h3 style="margin:0;flex:1;min-width:200px">' + esc(d.name) + '</h3>' +
+'<button class="btn small" id="deck-study">📖 Study</button>' +
+'<button class="btn small" id="deck-add">+ Add card</button>' +
+'<button class="btn small" id="deck-import" title="Import cards from text">\u2B06 Import</button>' +
+'<button class="btn small" id="deck-csv" title="Export deck as CSV">\u2B07 CSV</button>' +
+'<button class="btn small" id="deck-dup" title="Duplicate deck">📋</button>' +
+'<button class="btn small" id="deck-print" title="Print deck">🖨</button>' +
+'<button class="btn small" id="deck-rename">\u270F Rename</button>' +
+'<button class="btn small danger-ghost" id="deck-del">🗑</button></div>' +
+'<p class="conf" style="margin:6px 0 12px">' + d.cards.length + ' cards' +
+(d.cards.length ? ' · ' + deckMastery(d) + '% mastered' : '') +
+(leechN ? ' · <b style="color:var(--bad)">🪲 ' + leechN + ' leech' + (leechN === 1 ? '' : 'es') + '</b>' : '') +
+(note ? ' · from note <b>' + esc(note.title) + '</b>' : ' · source note deleted') +
+' · created ' + fmtDate(d.createdAt) + '</p>' +
+'<div class="card-search-row" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">' +
+(d.cards.length > 3 ? '<input type="text" id="card-search" placeholder="🔍 Search cards…" style="flex:1;min-width:160px" value="' + esc(ui.cardSearch) + '">' : '') +
+'<select id="card-sort" title="Sort cards" style="max-width:150px">' +
+'<option value="new"' + (ui.cardSort === 'new' ? ' selected' : '') + '>\u21C5 Newest</option>' +
+'<option value="az"' + (ui.cardSort === 'az' ? ' selected' : '') + '>\u21C5 A–Z</option>' +
+'<option value="due"' + (ui.cardSort === 'due' ? ' selected' : '') + '>\u21C5 Due first</option></select>' +
+(leechN ? '<button class="btn small' + (ui.cardFilter === 'leech' ? ' primary' : '') + '" id="card-leech">🪲 Leeches</button>' : '') +
+'</div>';
+if (selN) {
+html += '<div class="bulkbar" style="display:flex;gap:8px;align-items:center;background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:8px 12px;margin-bottom:10px;flex-wrap:wrap">' +
+'<b>' + selN + ' selected</b>' +
+'<button class="btn small" id="sel-none">Clear</button><span style="flex:1"></span>' +
+'<button class="btn small" id="sel-move">Move to deck…</button>' +
+'<button class="btn small danger" id="sel-del">Delete selected</button></div>';
+}
+if (!sorted.length) {
+html += d.cards.length
+? '<div class="empty" style="padding:30px">No cards match the current filter.</div>'
+: '<div class="empty" style="padding:30px">This deck is empty.<br><span style="font-size:13px">Add cards manually, import text, or generate them from a note.</span></div>';
+} else {
+if (cq || ui.cardFilter) html += '<p class="conf">' + sorted.length + ' of ' + d.cards.length + ' cards</p>';
+html += '<div style="margin-bottom:8px"><label class="conf" style="display:flex;gap:6px;align-items:center;cursor:pointer">' +
+'<input type="checkbox" id="sel-all"> Select all ' + sorted.length + ' shown</label></div>';
+html += sorted.map(function (c) {
+var due = c.sm2 ? SF.describe(c.sm2, Date.now()) : 'new';
+var dueCls = SF.isDue(c, Date.now()) ? 'due-label now' : 'due-label';
+var leech = SF.isLeech(c) ? ' <span class="rule-badge" style="color:var(--bad);border-color:var(--bad)" title="Failed 4+ times — consider rewording">🪲 leech</span>' : '';
+return '<div class="fcard" data-id="' + c.id + '"><div class="qa">' +
+'<div class="q"><input type="checkbox" class="sel-box" data-id="' + c.id + '"' + (ui.selCards[c.id] ? ' checked' : '') + ' style="margin-right:8px;transform:scale(1.2)"> ' +
+esc(c.front) + ' <span class="rule-badge">' + esc(SF.RULE_LABEL[c.rule] || c.rule) + '</span>' + leech + '</div>' +
+'<div class="a hidden">' + esc(c.back) + '</div></div>' +
+'<div class="frow"><span class="' + dueCls + '">' + esc(due) + '</span><span class="spacer"></span>' +
+'<span>reviewed ' + (c.reviews || 0) + '×</span>' +
+'<button class="icon-btn" data-act="edit" title="Edit">\u270F\uFE0F</button>' +
+'<button class="icon-btn" data-act="del" title="Delete">🗑\uFE0F</button></div></div>';
+}).join('');
+}
+html += '</div>';
+box.innerHTML = html;
+var qas = box.querySelectorAll('.fcard .qa');
+for (var i = 0; i < qas.length; i++) qas[i].addEventListener('click', function (ev) {
+if (ev.target.classList.contains('sel-box')) return;
+this.querySelector('.a').classList.toggle('hidden');
+});
+var sboxes = box.querySelectorAll('.sel-box');
+for (var si = 0; si < sboxes.length; si++) sboxes[si].addEventListener('change', function (ev) {
+ev.stopPropagation();
+if (this.checked) ui.selCards[this.dataset.id] = 1; else delete ui.selCards[this.dataset.id];
+renderDeckDetail();
+});
+var sall = $('sel-all');
+if (sall) sall.addEventListener('change', function () {
+sorted.forEach(function (c) { if (sall.checked) ui.selCards[c.id] = 1; else delete ui.selCards[c.id]; });
+renderDeckDetail();
+});
+var btns = box.querySelectorAll('.fcard .icon-btn');
+for (var j = 0; j < btns.length; j++) btns[j].addEventListener('click', function (ev) {
+ev.stopPropagation();
+var id = this.closest('.fcard').dataset.id;
+if (this.dataset.act === 'del') deleteCard(d, id);
+else editCardModal(d, id);
+});
+$('deck-study').addEventListener('click', function () { openStudy(d); });
+$('deck-add').addEventListener('click', function () { editCardModal(d, null); });
+$('deck-import').addEventListener('click', function () { openImportModal(d); });
+$('deck-csv').addEventListener('click', function () { exportDeckCSV(d); });
+$('deck-dup').addEventListener('click', function () { duplicateDeck(d); });
+$('deck-print').addEventListener('click', function () { printDeck(d); });
+var cs = $('card-search');
+if (cs) cs.addEventListener('input', function () {
+ui.cardSearch = this.value;
+renderDeckDetail();
+var el = $('card-search');
+el.focus();
+el.selectionStart = el.selectionEnd = el.value.length;
+});
+var cso = $('card-sort');
+if (cso) cso.addEventListener('change', function () { ui.cardSort = this.value; renderDeckDetail(); });
+var clf = $('card-leech');
+if (clf) clf.addEventListener('click', function () {
+ui.cardFilter = ui.cardFilter === 'leech' ? '' : 'leech';
+renderDeckDetail();
+});
+var snone = $('sel-none');
+if (snone) snone.addEventListener('click', function () { ui.selCards = {}; renderDeckDetail(); });
+var sdel = $('sel-del');
+if (sdel) sdel.addEventListener('click', function () { deleteSelected(d); });
+var smove = $('sel-move');
+if (smove) smove.addEventListener('click', function () { moveSelected(d); });
+$('deck-rename').addEventListener('click', function () {
+openModal('<h3>Rename deck</h3><input type="text" id="rn-name" style="width:100%" value="' + esc(d.name) + '">' +
+'<div class="modal-actions"><button class="btn" id="rn-cancel">Cancel</button><button class="btn primary" id="rn-ok">Save</button></div>');
+$('rn-cancel').addEventListener('click', closeModal);
+$('rn-ok').addEventListener('click', function () {
+d.name = $('rn-name').value.trim() || d.name;
+persist(true); closeModal(); renderDecks();
+});
+});
+$('deck-del').addEventListener('click', function () {
+if (!confirm('Delete deck "' + d.name + '" with ' + d.cards.length + ' cards?')) return;
+db.decks = db.decks.filter(function (x) { return x.id !== d.id; });
+ui.deckId = db.decks.length ? db.decks[0].id : null;
+ui.selCards = {};
+persist(true); renderDecks(); updateDueBadge();
+});
+}
+function deleteCard(deck, id) {
+var c = deck.cards.filter(function (x) { return x.id === id; })[0];
+if (!c || !confirm('Delete this card?\n\n' + c.front)) return;
+deck.cards = deck.cards.filter(function (x) { return x.id !== id; });
+persist(true); renderDeckDetail(); updateDueBadge();
+}
+function editCardModal(deck, id) {
+var c = id ? deck.cards.filter(function (x) { return x.id === id; })[0] : null;
+openModal('<h3>' + (c ? 'Edit card' : 'New card') + '</h3>' +
+'<p class="sub">Front = the prompt/question · Back = the answer.</p>' +
+'<label>Front</label><textarea id="ec-front" style="width:100%;min-height:70px">' + esc(c ? c.front : '') + '</textarea>' +
+'<label style="margin-top:8px;display:block">Back</label><textarea id="ec-back" style="width:100%;min-height:90px">' + esc(c ? c.back : '') + '</textarea>' +
+'<div class="modal-actions"><button class="btn" id="ec-cancel">Cancel</button>' +
+'<button class="btn primary" id="ec-ok">' + (c ? 'Save' : 'Add card') + '</button></div>');
+$('ec-cancel').addEventListener('click', closeModal);
+$('ec-ok').addEventListener('click', function () {
+var f = $('ec-front').value.trim(), b = $('ec-back').value.trim();
+if (!f || !b) { toast('Both front and back are required.'); return; }
+if (c) { c.front = f; c.back = b; }
+else deck.cards.push(SF.normalizeCard({ front: f, back: b, rule: 'manual' }));
+persist(true); closeModal(); renderDecks(); updateDueBadge();
+});
+}
+function openImportModal(deck) {
+openModal('<h3>\u2B06 Import cards</h3>' +
+'<p class="sub">Paste lines in any of these formats — blank lines and <code>#</code> comments are skipped:</p>' +
+'<p class="conf"><code>front | back</code> &nbsp;·&nbsp; <code>front: back</code> &nbsp;·&nbsp; <code>Q: …</code> / <code>A: …</code> pairs</p>' +
+'<textarea id="im-text" style="width:100%;min-height:150px" placeholder="Photosynthesis | process by which plants make food\nMitochondria: powerhouse of the cell"></textarea>' +
+'<p class="conf" id="im-count" style="margin:8px 0"></p>' +
+'<label class="conf" style="display:flex;gap:6px;align-items:center;color:var(--ink)"><input type="checkbox" id="im-skipdup" checked> Skip cards already in this deck</label>' +
+'<div class="modal-actions"><button class="btn" id="im-cancel">Cancel</button>' +
+'<button class="btn primary" id="im-ok">Import</button></div>');
+function currentFresh() {
+var parsed = SF.parseCardImport($('im-text').value);
+var existing = {};
+if ($('im-skipdup').checked) deck.cards.forEach(function (c) { existing[c.front.trim().toLowerCase()] = 1; });
+return parsed.filter(function (x) { return !existing[x.front.trim().toLowerCase()]; });
+}
+function refresh() {
+var parsed = SF.parseCardImport($('im-text').value);
+var fresh = currentFresh();
+$('im-count').textContent = parsed.length + ' card' + (parsed.length === 1 ? '' : 's') + ' found' +
+(parsed.length !== fresh.length ? ' · ' + (parsed.length - fresh.length) + ' duplicate' + (parsed.length - fresh.length === 1 ? '' : 's') + ' skipped' : '');
+$('im-ok').disabled = !fresh.length;
+}
+$('im-text').addEventListener('input', refresh);
+$('im-skipdup').addEventListener('change', refresh);
+$('im-cancel').addEventListener('click', closeModal);
+$('im-ok').addEventListener('click', function () {
+var fresh = currentFresh();
+if (!fresh.length) { toast('Nothing to import.'); return; }
+fresh.forEach(function (x) { deck.cards.push(SF.normalizeCard({ front: x.front, back: x.back, rule: 'manual' })); });
+persist(true); closeModal(); renderDecks(); updateDueBadge();
+toast('Imported ' + fresh.length + ' card' + (fresh.length === 1 ? '' : 's') + ' \u2713');
+});
+refresh();
+}
+function exportDeckCSV(deck) {
+if (!deck.cards.length) { toast('Deck is empty.'); return; }
+var fname = deck.name.replace(/[^a-z0-9\-_ ]/gi, '').trim().replace(/\s+/g, '-').toLowerCase() || 'deck';
+download(fname + '.csv', SF.deckToCSV(deck), 'text/csv');
+toast('CSV downloaded \u2713 (' + deck.cards.length + ' cards)');
+}
+function deleteSelected(deck) {
+var ids = Object.keys(ui.selCards);
+if (!ids.length) return;
+if (!confirm('Delete ' + ids.length + ' selected card' + (ids.length === 1 ? '' : 's') + '?')) return;
+var gone = {};
+ids.forEach(function (id) { gone[id] = 1; });
+deck.cards = deck.cards.filter(function (c) { return !gone[c.id]; });
+ui.selCards = {};
+persist(true); renderDecks(); updateDueBadge();
+toast('Deleted ' + ids.length + ' card' + (ids.length === 1 ? '' : 's'));
+}
+function moveSelected(deck) {
+var ids = Object.keys(ui.selCards);
+if (!ids.length) return;
+var others = db.decks.filter(function (x) { return x.id !== deck.id; });
+if (!others.length) { toast('No other deck to move to.'); return; }
+openModal('<h3>Move ' + ids.length + ' card' + (ids.length === 1 ? '' : 's') + '</h3>' +
+'<p class="sub">Cards keep their review schedule.</p>' +
+'<select id="mv-deck" style="width:100%">' + others.map(function (x) {
+return '<option value="' + x.id + '">' + esc(x.name) + ' (' + x.cards.length + ' cards)</option>';
+}).join('') + '</select>' +
+'<div class="modal-actions"><button class="btn" id="mv-cancel">Cancel</button>' +
+'<button class="btn primary" id="mv-ok">Move</button></div>');
+$('mv-cancel').addEventListener('click', closeModal);
+$('mv-ok').addEventListener('click', function () {
+var target = db.decks.filter(function (x) { return x.id === $('mv-deck').value; })[0];
+if (!target) { toast('Deck not found.'); return; }
+var gone = {}, moving = [];
+ids.forEach(function (id) { gone[id] = 1; });
+deck.cards.forEach(function (c) { if (gone[c.id]) moving.push(c); });
+deck.cards = deck.cards.filter(function (c) { return !gone[c.id]; });
+moving.forEach(function (c) { target.cards.push(c); });
+ui.selCards = {};
+persist(true); closeModal(); renderDecks(); updateDueBadge();
+toast('Moved ' + moving.length + ' card' + (moving.length === 1 ? '' : 's') + ' to "' + target.name + '"');
+});
+}
+function duplicateDeck(deck) {
+var copy = SF.normalizeDeck({ name: deck.name + ' (copy)', noteId: deck.noteId });
+copy.cards = deck.cards.map(function (c) {
+return SF.normalizeCard({ front: c.front, back: c.back, rule: c.rule });
+});
+db.decks.push(copy);
+ui.deckId = copy.id;
+ui.cardSearch = '';
+persist(true);
+renderDecks();
+updateDueBadge();
+toast('Deck duplicated ✓ (' + copy.cards.length + ' cards, fresh schedule)');
+}
+function printDeck(deck) {
+if (!deck.cards.length) { toast('Deck is empty.'); return; }
+$('print-area').innerHTML = '<div class="psheet"><h1>' + esc(deck.name) + '</h1>' +
+'<div class="psub">STANBEYOND StudyForge · ' + deck.cards.length + ' flashcards · printed ' +
+new Date().toLocaleDateString() + '</div>' +
+deck.cards.map(function (c, i) {
+return '<div class="pcard"><div class="pf">' + (i + 1) + '. ' + esc(c.front) + '</div>' +
+'<div class="pb">' + esc(c.back) + '</div></div>';
+}).join('') + '</div>';
+document.body.classList.add('printing');
+function cleanup() {
+document.body.classList.remove('printing');
+window.removeEventListener('afterprint', cleanup);
+}
+window.addEventListener('afterprint', cleanup);
+setTimeout(cleanup, 10000); // fallback if afterprint doesn't fire
+window.print();
+}
+function openStudy(deck) {
+if (!deck.cards.length) { toast('Deck is empty.'); return; }
+var order = SF.shuffle(deck.cards.map(function (_, i) { return i; }), SF.mulberry32(Date.now() % 2147483647));
+var idx = 0, showBack = false;
+function draw() {
+var c = deck.cards[order[idx]];
+openModal('<h3>📖 ' + esc(deck.name) + '</h3>' +
+'<p class="sub">Card ' + (idx + 1) + ' of ' + order.length + ' · quick study (no scheduling)</p>' +
+'<div class="big-card" id="st-card" style="cursor:pointer">' + esc(showBack ? c.back : c.front) + '</div>' +
+'<div class="conf" style="text-align:center">' + esc(SF.RULE_LABEL[c.rule] || c.rule) + ' · click card to flip</div>' +
+'<div class="modal-actions" style="justify-content:space-between">' +
+'<button class="btn" id="st-close">Done</button>' +
+'<span><button class="btn" id="st-prev">← Prev</button> <button class="btn" id="st-next">Next →</button></span></div>');
+$('st-card').addEventListener('click', function () { showBack = !showBack; draw(); });
+$('st-close').addEventListener('click', closeModal);
+$('st-prev').addEventListener('click', function () { idx = (idx - 1 + order.length) % order.length; showBack = false; draw(); });
+$('st-next').addEventListener('click', function () { idx = (idx + 1) % order.length; showBack = false; draw(); });
+}
+draw();
+}
+function renderQuiz() {
+if (!ui.quiz) renderQuizSetup();
+else if (ui.quiz.done) renderQuizResults();
+else renderQuizRun();
+}
+function renderQuizSetup() {
+var opts = db.decks.map(function (d) {
+return '<option value="' + d.id + '"' + (d.id === ui.deckId ? ' selected' : '') + '>' +
+esc(d.name) + ' (' + d.cards.length + ' cards)</option>';
+}).join('');
+$('quiz-root').innerHTML = '<div class="panel quiz-setup"><h3 style="margin-top:0">🎯 Build a quiz</h3>' +
+'<p class="conf">Questions are generated from your flashcards with a seeded shuffle — same seed, same quiz. Distractors come from other cards in the deck.</p>' +
+'<div class="row"><label style="min-width:120px">Deck</label><select id="qz-deck" style="flex:1">' + (opts || '<option value="">— no decks —</option>') + '</select></div>' +
+'<div class="row"><label style="min-width:120px">Questions</label><input type="number" id="qz-count" value="10" min="1" max="50" style="width:90px"></div>' +
+'<div class="row"><label style="min-width:120px">Types</label><span class="checks">' +
+'<label><input type="checkbox" id="qz-mcq" checked> Multiple choice</label>' +
+'<label><input type="checkbox" id="qz-tf" checked> True / False</label>' +
+'<label><input type="checkbox" id="qz-blank" checked> Fill in the blank</label>' +
+'<label><input type="checkbox" id="qz-match"> Matching</label></span></div>' +
+'<div class="row"><label style="min-width:120px">Seed</label><input type="number" id="qz-seed" placeholder="random" style="width:130px"> <span class="conf">same seed + same deck = same quiz</span></div>' +
+'<div class="row"><label style="min-width:120px">Time limit</label><select id="qz-timer">' +
+'<option value="0">No limit</option><option value="5">5 minutes</option>' +
+'<option value="10">10 minutes</option><option value="15">15 minutes</option>' +
+'<option value="30">30 minutes</option></select></div>' +
+'<div class="row"><button class="btn primary" id="qz-start">Start quiz →</button> <span class="conf" id="qz-hint"></span></div></div>';
+$('qz-start').addEventListener('click', function () {
+var d = db.decks.filter(function (x) { return x.id === $('qz-deck').value; })[0];
+if (!d) { toast('Create a deck first.'); return; }
+if (d.cards.length < 2) { toast('Deck needs at least 2 cards.'); return; }
+var types = [];
+if ($('qz-mcq').checked) types.push('mcq');
+if ($('qz-tf').checked) types.push('tf');
+if ($('qz-blank').checked) types.push('blank');
+if ($('qz-match').checked) types.push('match');
+if (!types.length) { toast('Pick at least one question type.'); return; }
+var seedInput = parseInt($('qz-seed').value, 10);
+var data = SF.buildQuiz(d.cards, {
+count: Math.max(1, Math.min(50, parseInt($('qz-count').value, 10) || 10)),
+types: types, seed: isNaN(seedInput) ? (Date.now() % 2147483647) : seedInput
+});
+if (!data.questions.length) { toast('Could not build questions from this deck.'); return; }
+var mins = parseInt($('qz-timer').value, 10) || 0;
+ui.quiz = { data: data, deck: d, idx: 0, answers: [], checked: [], matchSt: null, done: false,
+deadline: mins > 0 ? Date.now() + mins * 60000 : 0 };
+if (ui.quiz.deadline) startQuizTimer();
+renderQuiz();
+});
+}
+var _quizTimerId = null;
+function stopQuizTimer() {
+if (_quizTimerId) { clearInterval(_quizTimerId); _quizTimerId = null; }
+}
+function startQuizTimer() {
+stopQuizTimer();
+_quizTimerId = setInterval(function () {
+var qz = ui.quiz;
+if (!qz || !qz.deadline || qz.done) { stopQuizTimer(); return; }
+var ms = qz.deadline - Date.now();
+if (ms <= 0) {
+stopQuizTimer();
+toast('⏱ Time is up — submitting what you have.');
+finishQuiz();
+return;
+}
+var chip = $('qz-timer-chip');
+if (chip) {
+var s = Math.ceil(ms / 1000);
+var mm = Math.floor(s / 60), ss = s % 60;
+chip.textContent = '⏱ ' + mm + ':' + (ss < 10 ? '0' : '') + ss;
+chip.classList.toggle('low', ms < 60000);
+}
+}, 500);
+}
+function quizProgress() {
+var q = ui.quiz;
+return Math.round((q.idx / q.data.questions.length) * 100);
+}
+function renderQuizRun() {
+var qz = ui.quiz, q = qz.data.questions[qz.idx];
+var checked = qz.checked[qz.idx];
+var html = '<div class="panel qcard"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">' +
+'<b>Question ' + (qz.idx + 1) + ' of ' + qz.data.questions.length + '</b>' +
+(qz.deadline ? '<span id="qz-timer-chip">⏱ …</span>' : '') +
+'<span class="conf">' + esc(qz.deck.name) + '</span></div>' +
+'<div class="progress"><div style="width:' + quizProgress() + '%"></div></div>' +
+'<div class="qprompt">' + esc(q.kind === 'tf' ? q.statement : q.prompt) + '</div><div id="qz-body"></div>' +
+'<div id="qz-feedback"></div>' +
+'<div class="modal-actions"><button class="btn" id="qz-quit">Quit</button><span style="flex:1"></span>' +
+(checked ? '<button class="btn primary" id="qz-next">' + (qz.idx + 1 < qz.data.questions.length ? 'Next →' : 'See results →') + '</button>'
+: '<button class="btn primary" id="qz-check">Check</button>') + '</div></div>';
+$('quiz-root').innerHTML = html;
+var body = $('qz-body');
+if (q.kind === 'mcq') {
+body.innerHTML = '<div class="choices">' + q.choices.map(function (ch, i) {
+var cls = 'choice';
+if (checked) {
+if (i === q.answerIndex) cls += ' right';
+else if (i === qz.answers[qz.idx]) cls += ' wrong';
+} else if (qz.answers[qz.idx] === i) cls += ' sel';
+return '<button class="' + cls + '" data-i="' + i + '"' + (checked ? ' disabled' : '') + '>' + esc(ch) + '</button>';
+}).join('') + '</div>';
+if (!checked) {
+var chs = body.querySelectorAll('.choice');
+for (var i = 0; i < chs.length; i++) chs[i].addEventListener('click', function () {
+qz.answers[qz.idx] = parseInt(this.dataset.i, 10);
+renderQuizRun();
+});
+}
+} else if (q.kind === 'tf') {
+var tv = qz.answers[qz.idx];
+body.innerHTML = '<div class="choices" style="flex-direction:row">' +
+'<button class="choice' + (tv === true ? ' sel' : '') + (checked ? (q.answer === true ? ' right' : (tv === true ? ' wrong' : '')) : '') + '" data-v="1"' + (checked ? ' disabled' : '') + '>True</button>' +
+'<button class="choice' + (tv === false ? ' sel' : '') + (checked ? (q.answer === false ? ' right' : (tv === false ? ' wrong' : '')) : '') + '" data-v="0"' + (checked ? ' disabled' : '') + '>False</button></div>';
+if (!checked) {
+var tfs = body.querySelectorAll('.choice');
+for (var k = 0; k < tfs.length; k++) tfs[k].addEventListener('click', function () {
+qz.answers[qz.idx] = this.dataset.v === '1';
+renderQuizRun();
+});
+}
+} else if (q.kind === 'blank') {
+body.innerHTML = '<input type="text" id="qz-blank-in" style="width:100%;font-size:16px" placeholder="Type the missing word…" ' +
+'value="' + esc(qz.answers[qz.idx] || '') + '"' + (checked ? ' disabled' : '') + '>';
+if (!checked) {
+$('qz-blank-in').addEventListener('input', function () { qz.answers[qz.idx] = this.value; });
+$('qz-blank-in').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('qz-check').click(); });
+setTimeout(function () { var el = $('qz-blank-in'); if (el) el.focus(); }, 50);
+}
+} else if (q.kind === 'match') {
+if (!qz.matchSt) qz.matchSt = { sel: null, pairs: {} };
+body.innerHTML = renderMatchBody(q, qz.matchSt, checked);
+wireMatch(q, qz.matchSt, checked);
+}
+if (checked) {
+var det = SF.gradeQuiz({ questions: [q] }, [qz.answers[qz.idx]]).detail[0];
+var fb = $('qz-feedback');
+if (q.kind === 'match') {
+fb.innerHTML = '<div class="feedback ' + (det.ok ? 'ok' : 'no') + '">' +
+(det.ok ? '✓ All pairs matched!' : 'You matched ' + det.expected + '. Correct pairs: ' +
+q.pairs.map(function (p) { return esc(p.left) + ' → ' + esc(p.right); }).join('; ')) + '</div>';
+} else {
+fb.innerHTML = '<div class="feedback ' + (det.ok ? 'ok' : 'no') + '">' +
+(det.ok ? '✓ Correct!' : '✗ Not quite. Correct answer: <b>' + esc(String(det.expected)) + '</b>') + '</div>';
+}
+}
+$('qz-quit').addEventListener('click', function () {
+if (confirm('Quit this quiz? Progress will be lost.')) { stopQuizTimer(); ui.quiz = null; renderQuiz(); }
+});
+var chk = $('qz-check');
+if (chk) chk.addEventListener('click', function () {
+if (q.kind === 'match') {
+var st = qz.matchSt, ans = [];
+for (var li = 0; li < q.leftOrder.length; li++) ans.push(st.pairs[li] != null ? st.pairs[li] : null);
+qz.answers[qz.idx] = ans;
+}
+if (qz.answers[qz.idx] == null || qz.answers[qz.idx] === '') { toast('Answer first.'); return; }
+qz.checked[qz.idx] = true;
+renderQuizRun();
+});
+var nxt = $('qz-next');
+if (nxt) nxt.addEventListener('click', function () {
+if (qz.idx + 1 < qz.data.questions.length) { qz.idx++; qz.matchSt = null; renderQuizRun(); }
+else finishQuiz();
+});
+}
+function renderMatchBody(q, st, checked) {
+function rightTakenBy(ri) {
+for (var li in st.pairs) if (st.pairs[li] === ri) return parseInt(li, 10);
+return null;
+}
+var left = q.leftOrder.map(function (pi, li) {
+var cls = 'match-item' + (st.sel === li ? ' sel' : '') + (st.pairs[li] != null ? ' paired' : '');
+return '<button class="' + cls + '" data-li="' + li + '"' + (checked ? ' disabled' : '') + '>' + esc(q.pairs[pi].left) + '</button>';
+}).join('');
+var right = q.rightOrder.map(function (pi, ri) {
+var taken = rightTakenBy(ri);
+var cls = 'match-item' + (taken != null ? ' paired' : '');
+var mark = '';
+if (checked) {
+var want = q.rightOrder[ri], got = false;
+for (var li in st.pairs) if (q.leftOrder[parseInt(li, 10)] === want && st.pairs[li] === ri) { got = true; break; }
+mark = got ? ' ✓' : ' ✗';
+}
+return '<button class="' + cls + '" data-ri="' + ri + '"' + (checked ? ' disabled' : '') + '>' + esc(q.pairs[pi].right) + esc(mark) + '</button>';
+}).join('');
+return '<p class="conf">Click a term, then its definition. ' + (checked ? '' : '<button class="btn small" id="m-clear">Clear</button>') + '</p>' +
+'<div class="match-cols"><div>' + left + '</div><div>' + right + '</div></div>';
+}
+function wireMatch(q, st, checked) {
+if (checked) return;
+var ls = document.querySelectorAll('#qz-body [data-li]');
+for (var i = 0; i < ls.length; i++) ls[i].addEventListener('click', function () {
+st.sel = parseInt(this.dataset.li, 10);
+$('qz-body').innerHTML = renderMatchBody(q, st, false);
+wireMatch(q, st, false);
+});
+var rs = document.querySelectorAll('#qz-body [data-ri]');
+for (var j = 0; j < rs.length; j++) rs[j].addEventListener('click', function () {
+if (st.sel == null) { toast('Pick a term on the left first.'); return; }
+st.pairs[st.sel] = parseInt(this.dataset.ri, 10);
+st.sel = null;
+$('qz-body').innerHTML = renderMatchBody(q, st, false);
+wireMatch(q, st, false);
+});
+var cl = $('m-clear');
+if (cl) cl.addEventListener('click', function () {
+st.pairs = {}; st.sel = null;
+$('qz-body').innerHTML = renderMatchBody(q, st, false);
+wireMatch(q, st, false);
+});
+}
+function finishQuiz() {
+stopQuizTimer();
+var qz = ui.quiz;
+var res = SF.gradeQuiz(qz.data, qz.answers);
+var detail = res.detail.map(function (d, i) {
+var q = d.question, given, expected;
+if (q.kind === 'mcq') { given = q.choices[qz.answers[i]]; expected = q.choices[q.answerIndex]; }
+else if (q.kind === 'tf') {
+given = qz.answers[i] == null ? '\u2014' : (qz.answers[i] ? 'True' : 'False');
+expected = q.answer ? 'True' : 'False';
+}
+else if (q.kind === 'blank') { given = qz.answers[i] || '\u2014'; expected = q.answer; }
+else {
+given = Math.round((d.correct || 0) * 100) + '% of pairs';
+expected = q.pairs.map(function (x) { return x.left + ' \u2192 ' + x.right; }).join('; ');
+}
+return { prompt: q.kind === 'tf' ? q.statement : q.prompt, kind: q.kind,
+given: String(given == null ? '\u2014' : given), expected: String(expected), ok: !!d.ok };
+});
+db.quizRuns.push({
+id: SF.uid('qr'), deckId: qz.deck.id, deckName: qz.deck.name,
+at: Date.now(), correct: res.correct, total: res.total, pct: res.pct, detail: detail
+});
+for (var i = 0; i < db.quizRuns.length - 30; i++) delete db.quizRuns[i].detail;
+db.quizRuns = db.quizRuns.slice(-200);
+persist(true);
+qz.result = res;
+qz.done = true;
+renderQuizResults();
+}
+function reviewQuizRun(run) {
+if (!run.detail || !run.detail.length) { toast('No per-question detail saved for this run.'); return; }
+openModal('<h3>🔍 Quiz review \u2014 ' + esc(run.deckName) + '</h3>' +
+'<p class="sub">' + run.correct + '/' + run.total + ' (' + run.pct + '%) \u00B7 ' + fmtDate(run.at) + '</p>' +
+'<div style="max-height:52vh;overflow:auto">' + run.detail.map(function (d, i) {
+return '<div class="review-row"><b>' + (d.ok ? '\u2713' : '\u2717') + ' Q' + (i + 1) + '.</b> ' + esc(d.prompt) +
+'<br><span class="conf">You: ' + esc(d.given) +
+(d.ok ? '' : ' \u00B7 Correct: <b>' + esc(d.expected) + '</b>') + '</span></div>';
+}).join('') + '</div>' +
+'<div class="modal-actions"><button class="btn primary" id="qr-close">Close</button></div>');
+$('qr-close').addEventListener('click', closeModal);
+}
+function renderQuizResults() {
+var qz = ui.quiz, res = qz.result;
+var rows = res.detail.map(function (d, i) {
+var q = d.question, given;
+if (q.kind === 'mcq') given = q.choices[qz.answers[i]];
+else if (q.kind === 'tf') given = qz.answers[i] ? 'True' : 'False';
+else if (q.kind === 'blank') given = qz.answers[i];
+else given = d.expected + ' correct';
+return '<div class="review-row"><b>' + (d.ok ? '✓' : '✗') + ' Q' + (i + 1) + '.</b> ' +
+esc(q.kind === 'tf' ? q.statement : q.prompt) +
+'<br><span class="conf">You: ' + esc(String(given == null ? '—' : given)) +
+(d.ok ? '' : ' · Correct: <b>' + esc(String(d.expected)) + '</b>') + '</span></div>';
+}).join('');
+$('quiz-root').innerHTML = '<div class="panel qcard"><h3 style="text-align:center;margin-top:0">Quiz complete</h3>' +
+'<div class="results-score">' + res.pct + '%</div>' +
+'<p class="conf" style="text-align:center">' + res.correct + ' of ' + res.total + ' correct · ' + esc(qz.deck.name) + ' · saved to stats</p>' +
+'<div style="max-height:40vh;overflow:auto;margin:12px 0">' + rows + '</div>' +
+'<div class="modal-actions" style="justify-content:center"><button class="btn" id="qz-again2">↺ New quiz</button>' +
+'<button class="btn primary" id="qz-tostats">View stats →</button></div></div>';
+$('qz-again2').addEventListener('click', function () { ui.quiz = null; renderQuiz(); });
+$('qz-tostats').addEventListener('click', function () { ui.quiz = null; showView('stats'); });
+}
+function renderReview(rebuild) {
+if (rebuild) {
+var q = [];
+db.decks.forEach(function (d) {
+d.cards.forEach(function (c) {
+if (SF.isDue(c, Date.now())) q.push({ deckId: d.id, deckName: d.name, card: c });
+});
+});
+ui.reviewQueue = SF.shuffle(q, SF.mulberry32(Date.now() % 2147483647));
+ui.reviewIdx = 0;
+ui.reviewShowBack = false;
+}
+var box = $('review-root');
+var left = ui.reviewQueue.length - ui.reviewIdx;
+if (!left) {
+box.innerHTML = '<div class="panel" style="max-width:560px;margin:0 auto;text-align:center">' +
+'<div style="font-size:44px">🎉</div><h3>All caught up!</h3>' +
+'<p class="conf">No cards are due right now. Add more cards or come back later — spaced repetition works best in short daily sessions.</p></div>';
+return;
+}
+var item = ui.reviewQueue[ui.reviewIdx], c = item.card;
+box.innerHTML = '<div class="review-card"><p class="conf">' + esc(item.deckName) + ' · card ' +
+(ui.reviewIdx + 1) + ' of ' + ui.reviewQueue.length + '</p>' +
+'<div class="progress"><div style="width:' + Math.round((ui.reviewIdx / ui.reviewQueue.length) * 100) + '%"></div></div>' +
+'<div class="big-card">' + esc(ui.reviewShowBack ? c.back : c.front) + '</div>' +
+(ui.reviewShowBack
+? '<div class="grade-row"><button class="btn" data-g="again" style="border-color:var(--bad);color:var(--bad)">Again</button>' +
+'<button class="btn" data-g="hard">Hard</button>' +
+'<button class="btn primary" data-g="good">Good</button>' +
+'<button class="btn" data-g="easy" style="border-color:var(--good);color:var(--good)">Easy</button></div>'
+: '<button class="btn primary" id="rv-show" style="padding:10px 34px">Show answer</button>') +
+'<p class="conf" style="margin-top:14px">Shortcuts: <code>Space</code> show · <code>1</code>–<code>4</code> Again/Hard/Good/Easy</p></div>';
+var sh = $('rv-show');
+if (sh) sh.addEventListener('click', function () { ui.reviewShowBack = true; renderReview(false); });
+var gs = box.querySelectorAll('[data-g]');
+for (var i = 0; i < gs.length; i++) gs[i].addEventListener('click', function () {
+var quality = SF.qualityFor(this.dataset.g);
+c.sm2 = SF.review(c.sm2, quality, Date.now());
+c.reviews = (c.reviews || 0) + 1;
+if (quality < 3) c.lapses = (c.lapses || 0) + 1;
+db.reviewLog.push({ at: Date.now(), cardId: c.id, deckId: item.deckId, quality: quality });
+if (db.reviewLog.length > 5000) db.reviewLog = db.reviewLog.slice(-5000);
+ui.reviewIdx++;
+ui.reviewShowBack = false;
+persist(true);
+renderReview(false);
+});
+}
+function weekActivity() {
+var days = [];
+var now = new Date();
+for (var i = 6; i >= 0; i--) { var d = new Date(now); d.setDate(d.getDate() - i); days.push(d); }
+return days.map(function (d) {
+var k = d.toDateString(), rev = 0, qz = 0, i;
+for (i = 0; i < db.reviewLog.length; i++) if (new Date(db.reviewLog[i].at).toDateString() === k) rev++;
+for (i = 0; i < db.quizRuns.length; i++) if (new Date(db.quizRuns[i].at).toDateString() === k) qz++;
+return { label: 'SMTWTFS'[d.getDay()], rev: rev, qz: qz };
+});
+}
+function weekChartHtml() {
+var wk = weekActivity(), wkMax = 1, i;
+for (i = 0; i < wk.length; i++) wkMax = Math.max(wkMax, wk[i].rev + wk[i].qz);
+var cols = wk.map(function (w) {
+var bars = '';
+if (w.rev > 0) bars += '<div class="wbar" style="height:' + Math.max(5, Math.round(w.rev / wkMax * 110)) + 'px" title="' + w.rev + ' reviews"></div>';
+if (w.qz > 0) bars += '<div class="wbar quiz" style="height:' + Math.max(5, Math.round(w.qz / wkMax * 110)) + 'px" title="' + w.qz + ' quizzes"></div>';
+if (!bars) bars = '<div style="height:5px"></div>';
+return '<div class="wday"><div class="wbars">' + bars + '</div><div class="wlabel">' + w.label + '</div></div>';
+}).join('');
+return '<div class="panel" style="margin-bottom:16px"><h3 style="margin-top:0">This week</h3>' +
+'<div class="week-chart">' + cols + '</div>' +
+'<div class="wlegend"><span><i style="background:var(--accent)"></i>reviews</span>' +
+'<span><i style="background:var(--accent2)"></i>quizzes</span></div></div>';
+}
+function calcStreak() {
+var days = {};
+db.reviewLog.forEach(function (r) {
+days[new Date(r.at).toDateString()] = 1;
+});
+var streak = 0, d = new Date();
+if (!days[d.toDateString()]) d.setDate(d.getDate() - 1); // allow "yesterday" to keep streak alive
+while (days[d.toDateString()]) { streak++; d.setDate(d.getDate() - 1); }
+return streak;
+}
+function renderStats() {
+var totalCards = 0, totalDue = 0, totalEF = 0;
+db.decks.forEach(function (d) {
+totalCards += d.cards.length;
+totalDue += SF.dueCount(d.cards, Date.now());
+d.cards.forEach(function (c) { totalEF += (c.sm2 ? c.sm2.ef : 2.5); });
+});
+var today = new Date().toDateString();
+var revToday = db.reviewLog.filter(function (r) { return new Date(r.at).toDateString() === today; }).length;
+var runs = db.quizRuns;
+var avg = runs.length ? runs.reduce(function (a, r) { return a + r.pct; }, 0) / runs.length : 0;
+var best = runs.length ? Math.max.apply(null, runs.map(function (r) { return r.pct; })) : 0;
+var leechN = 0;
+db.decks.forEach(function (d) { d.cards.forEach(function (c) { if (SF.isLeech(c)) leechN++; }); });
+var deckRows = db.decks.map(function (d) {
+var due = SF.dueCount(d.cards, Date.now());
+var mstd = d.cards.length ? Math.round((d.cards.filter(isMastered).length / d.cards.length) * 100) + '%' : '\u2014';
+var ef = d.cards.length ? (d.cards.reduce(function (a, c) { return a + (c.sm2 ? c.sm2.ef : 2.5); }, 0) / d.cards.length).toFixed(2) : '\u2014';
+return '<tr><td>' + esc(d.name) + '</td><td>' + d.cards.length + '</td><td>' + due + '</td><td>' + mstd + '</td><td>' + ef + '</td></tr>';
+}).join('');
+var runRows = runs.slice(-8).reverse().map(function (r) {
+return '<tr><td>' + esc(r.deckName) + '</td><td>' + r.correct + '/' + r.total + '</td><td>' + r.pct + '%</td><td>' + fmtDate(r.at) + '</td>' +
+'<td>' + (r.detail ? '<button class="btn small" data-run="' + r.id + '">Review</button>' : '<span class="conf">\u2014</span>') + '</td></tr>';
+}).join('');
+$('stats-root').innerHTML =
+'<div class="stat-grid">' +
+stat(totalCards, 'flashcards') + stat(db.decks.length, 'decks') + stat(db.notes.length, 'notes') +
+stat(totalDue, 'due now') + stat(revToday, 'reviews today') + stat(db.reviewLog.length, 'total reviews') +
+stat(runs.length ? avg.toFixed(1) + '%' : '—', 'avg quiz score') + stat(calcStreak() + '🔥', 'day streak') +
+(leechN ? stat('🪲' + leechN, 'leech cards') : '') +
+'</div>' +
+'<div class="panel" style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;align-items:center"><b>Daily goal</b><span class="conf">' + revToday + ' / ' + (db.settings.dailyGoal || 20) + ' reviews</span></div>' +
+'<div class="progress" style="margin:8px 0 0"><div style="width:' + Math.min(100, Math.round((revToday / (db.settings.dailyGoal || 20)) * 100)) + '%"></div></div></div>' +
+weekChartHtml() +
+'<div class="set-grid"><div><h3>Decks</h3><div class="table-wrap"><table class="data"><tr><th>Deck</th><th>Cards</th><th>Due</th><th>Mastered</th><th>Avg ease</th></tr>' +
+(deckRows || '<tr><td colspan="4" class="conf">No decks yet.</td></tr>') + '</table></div></div>' +
+'<div><h3>Recent quizzes</h3><div class="table-wrap"><table class="data"><tr><th>Deck</th><th>Score</th><th>%</th><th>Date</th><th></th></tr>' +
+(runRows || '<tr><td colspan="5" class="conf">No quizzes taken yet.</td></tr>') + '</table></div></div></div>';
+function stat(n, l) { return '<div class="stat"><div class="n">' + n + '</div><div class="l">' + l + '</div></div>'; }
+var rb = document.querySelectorAll('#stats-root [data-run]');
+for (var ri = 0; ri < rb.length; ri++) rb[ri].addEventListener('click', function () {
+var id = this.dataset.run;
+var run = db.quizRuns.filter(function (r) { return r.id === id; })[0];
+if (run) reviewQuizRun(run);
+});
+}
+function updateStorageMeter() {
+var bytes = SF.storageBytes();
+var quota = 5 * 1024 * 1024;
+var pct = Math.min(100, (bytes / quota) * 100);
+var bar = $('storage-bar'), txt = $('storage-text');
+if (!bar || !txt) return;
+bar.style.width = pct.toFixed(1) + '%';
+txt.textContent = (bytes / 1024).toFixed(1) + ' KB of ~5 MB localStorage used (' + pct.toFixed(1) + '%)';
+}
+function renderSettings() {
+updateStorageMeter();
+var gi = $('goal-input');
+gi.value = db.settings.dailyGoal || 20;
+gi.onchange = function () {
+db.settings.dailyGoal = Math.max(1, Math.min(500, parseInt(gi.value, 10) || 20));
+gi.value = db.settings.dailyGoal;
+persist(true);
+toast('Daily goal: ' + db.settings.dailyGoal + ' reviews/day ✓');
+};
+}
+function download(filename, text, mime) {
+var blob = new Blob([text], { type: mime || 'application/json' });
+var a = document.createElement('a');
+a.href = URL.createObjectURL(blob);
+a.download = filename;
+document.body.appendChild(a);
+a.click();
+setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+function applyTheme() {
+document.documentElement.dataset.theme = db.settings.theme === 'dark' ? 'dark' : 'light';
+$('theme-toggle').textContent = db.settings.theme === 'dark' ? '☀️' : '🌙';
+}
+function init() {
+var btns = document.querySelectorAll('#mainnav button');
+for (var i = 0; i < btns.length; i++) btns[i].addEventListener('click', function () { showView(this.dataset.view); });
+$('theme-toggle').addEventListener('click', function () {
+db.settings.theme = db.settings.theme === 'dark' ? 'light' : 'dark';
+applyTheme(); persist(true);
+});
+$('modal-back').addEventListener('click', closeModal);
+document.addEventListener('keydown', function (e) {
+if (e.key === 'Escape') { closeModal(); return; }
+if (ui.view !== 'review' || $('modal-root').classList.contains('open')) return;
+var tag = (document.activeElement && document.activeElement.tagName) || '';
+if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+if (e.key === ' ') {
+var sh = $('rv-show');
+if (sh) { e.preventDefault(); sh.click(); }
+} else if (ui.reviewShowBack && ['1', '2', '3', '4'].indexOf(e.key) >= 0) {
+var grades = ['again', 'hard', 'good', 'easy'];
+var btn = document.querySelector('#review-root [data-g="' + grades[parseInt(e.key, 10) - 1] + '"]');
+if (btn) btn.click();
+}
+});
+$('new-note').addEventListener('click', openTemplatePicker);
+function openTemplatePicker() {
+var templates = [
+{ name: 'Blank', desc: 'Empty note', body: '' },
+{ name: 'Cornell notes', desc: 'Cues \u00B7 notes \u00B7 summary', body: '## Key points\n\n- \n\n## Notes\n\n\n## Summary\n\n' },
+{ name: 'Vocabulary', desc: 'Term: definition list', body: 'Term: definition\nTerm: definition\n\nQ: \nA: \n' },
+{ name: 'Q & A', desc: 'Question pairs', body: 'Q: \nA: \n\nQ: \nA: \n' }
+];
+openModal('<h3>📝 New note</h3><p class="sub">Pick a template to start from:</p>' +
+templates.map(function (t, i) {
+return '<button class="choice" data-t="' + i + '" style="margin-bottom:8px"><b>' + esc(t.name) + '</b><br><span class="conf">' + esc(t.desc) + '</span></button>';
+}).join('') +
+'<div class="modal-actions"><button class="btn" id="tp-cancel">Cancel</button></div>');
+$('tp-cancel').addEventListener('click', closeModal);
+var bs = document.querySelectorAll('#modal-box [data-t]');
+for (var i = 0; i < bs.length; i++) bs[i].addEventListener('click', function () {
+var t = templates[parseInt(this.dataset.t, 10)];
+var n = SF.normalizeNote({ title: 'Untitled note', body: t.body, notebook: ui.nbFilter || 'General' });
+db.notes.unshift(n);
+ui.noteId = n.id;
+persist(true); closeModal(); renderNotes();
+setTimeout(function () { $('ed-title').focus(); $('ed-title').select(); }, 50);
+});
+}
+var searchT = null;
+$('note-search').addEventListener('input', function () {
+clearTimeout(searchT);
+var v = this.value;
+searchT = setTimeout(function () { ui.noteSearch = v; renderNoteList(); }, 250);
+});
+$('notebook-filter').addEventListener('change', function () { ui.nbFilter = this.value; renderNotes(); });
+$('note-sort').addEventListener('change', function () { ui.noteSort = this.value; renderNoteList(); });
+$('pin-note').addEventListener('click', function () {
+var n = currentNote(); if (!n) return;
+n.pinned = !n.pinned; n.updatedAt = Date.now();
+this.classList.toggle('on', !!n.pinned);
+this.title = n.pinned ? 'Unpin note' : 'Pin note';
+persist(true); renderNoteList();
+toast(n.pinned ? '📌 Note pinned' : 'Note unpinned');
+});
+$('ed-title').addEventListener('input', function () {
+var n = currentNote(); if (!n) return;
+n.title = this.value; n.updatedAt = Date.now(); markBodyDirty();
+});
+$('ed-notebook').addEventListener('input', function () {
+var n = currentNote(); if (!n) return;
+n.notebook = this.value.trim() || 'General'; n.updatedAt = Date.now(); markBodyDirty();
+});
+$('ed-tags').addEventListener('input', function () {
+var n = currentNote(); if (!n) return;
+n.tags = this.value.split(',').map(function (t) { return t.trim(); }).filter(Boolean);
+n.updatedAt = Date.now(); markBodyDirty();
+});
+$('ed-text').addEventListener('input', syncBodyFromTextarea);
+$('ed-text').addEventListener('keydown', function (e) {
+if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+e.preventDefault(); persist(true); toast('Saved ✓');
+}
+});
+var tb = document.querySelectorAll('.toolbar .btn');
+for (var t = 0; t < tb.length; t++) tb[t].addEventListener('click', function () {
+var cmd = this.dataset.cmd;
+if (cmd === 'bold') surround('**', '**');
+else if (cmd === 'h2') prefixLine('## ');
+else if (cmd === 'bullet') prefixLine('- ');
+else if (cmd === 'qa') insertAtCursor('\nQ: \nA: \n');
+else if (cmd === 'term') insertAtCursor('\nTerm: definition\n');
+else if (cmd === 'preview') { ui.preview = !ui.preview; syncPreview(); }
+});
+$('gen-cards').addEventListener('click', openGenerate);
+$('del-note').addEventListener('click', function () {
+var n = currentNote(); if (!n) return;
+if (!confirm('Delete note "' + (n.title || 'Untitled') + '"? Its flashcard decks are kept.')) return;
+db.notes = db.notes.filter(function (x) { return x.id !== n.id; });
+ui.noteId = db.notes.length ? db.notes[0].id : null;
+_lastEdNote = null;
+persist(true); renderNotes();
+});
+$('new-deck').addEventListener('click', function () {
+var d = SF.normalizeDeck({ name: 'New deck' });
+db.decks.push(d);
+ui.deckId = d.id;
+persist(true); renderDecks();
+});
+var dsT = null;
+$('deck-search').addEventListener('input', function () {
+clearTimeout(dsT);
+var v = this.value;
+dsT = setTimeout(function () { ui.deckSearch = v; renderDecks(); }, 250);
+});
+$('export-btn').addEventListener('click', function () {
+var d = new Date(), p = function (x) { return String(x).padStart(2, '0'); };
+download('stanbeyond-studyforge-backup-' + d.getFullYear() + p(d.getMonth() + 1) + p(d.getDate()) + '.json', SF.serialize(db));
+toast('Backup downloaded ✓');
+});
+$('import-btn').addEventListener('click', function () { $('import-file').click(); });
+$('import-file').addEventListener('change', function () {
+var f = this.files[0]; if (!f) return;
+var rd = new FileReader();
+rd.onload = function () {
+var imp = SF.deserialize(String(rd.result));
+var have = {};
+db.notes.forEach(function (n) { have[n.id] = 1; });
+db.decks.forEach(function (d) { have[d.id] = 1; });
+var nn = 0, nd = 0;
+imp.notes.forEach(function (n) { if (!have[n.id]) { db.notes.push(n); nn++; } });
+imp.decks.forEach(function (d) { if (!have[d.id]) { db.decks.push(d); nd++; } });
+db.quizRuns = db.quizRuns.concat(imp.quizRuns).slice(-500);
+db.reviewLog = db.reviewLog.concat(imp.reviewLog).slice(-5000);
+persist(true);
+toast('Imported ' + nn + ' notes, ' + nd + ' decks ✓');
+renderSettings();
+};
+rd.readAsText(f);
+this.value = '';
+});
+$('samples-btn').addEventListener('click', function () {
+var has = db.notes.some(function (n) { return n.id.indexOf('note_sample_') === 0; });
+if (has) { toast('Sample notes are already here.'); return; }
+db.notes = SF.sampleNotes().concat(db.notes);
+persist(true); renderNotes();
+toast('Sample notes loaded ✓');
+});
+$('wipe-btn').addEventListener('click', function () {
+if (!confirm('Erase ALL notes, decks, quizzes and stats?')) return;
+if (!confirm('Really? This cannot be undone.')) return;
+db = SF.blankDB();
+ui.noteId = null; ui.deckId = null; ui.quiz = null;
+_lastEdNote = null;
+persist(true);
+applyTheme(); updateDueBadge();
+showView('notes');
+toast('All data erased.');
+});
+applyTheme();
+updateDueBadge();
+showView('notes');
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+else init();
+})();</script></body></html>
